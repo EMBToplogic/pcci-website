@@ -116,6 +116,7 @@ const Events = () => {
                   src={"/images/test_image.png"}
                   layout='fill'
                   objectFit='cover'
+                  alt={`${data.eventname} Event Poster`}
                 />
               </div>
               <div className={eventStyles.event_text_container}>

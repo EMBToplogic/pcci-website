@@ -14,6 +14,10 @@ import navStyles from "../styles/components/Navbar.module.css";
 
 import { Menu } from "react-feather";
 
+// Images
+
+import PCCI_Logo from "../public/images/img_pcci_logo.png";
+
 const Navbar = () => {
   return (
     <div className={navStyles.navbar_container}>
@@ -21,7 +25,7 @@ const Navbar = () => {
         <Link href='/'>
           <a>
             <Image
-              src={"/../public/images/img_pcci_logo.png"}
+              src={PCCI_Logo}
               layout='fill'
               objectFit='contain'
               alt='Philippine Chamber of Commerce and Industry Logo'

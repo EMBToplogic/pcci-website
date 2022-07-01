@@ -14,6 +14,10 @@ import Meta from "../../components/Meta";
 
 import newsPageStyles from "../../styles/news/NewsPage.module.css";
 
+// Images
+
+import TheVoiceLogo from "../../public/images/the_voice.png";
+
 const NewsPage = ({ news }) => {
   return (
     <>
@@ -25,10 +29,11 @@ const NewsPage = ({ news }) => {
           <Header
             title={
               <Image
-                src='/../public/images/the_voice.png'
+                src={TheVoiceLogo}
                 objectFit='contain'
                 width='400'
                 height='101'
+                alt='The Voice Logo'
               />
             }
             style={{

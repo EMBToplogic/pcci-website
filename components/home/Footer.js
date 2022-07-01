@@ -6,12 +6,16 @@ import Link from "next/link";
 
 import footerStyles from "../../styles/components/home/Footer.module.css";
 
+// Images
+
+import PCCI_Logo from "../../public/images/img_pcci_logo.png";
+
 const Footer = () => {
   return (
     <div className={footerStyles.footer_main}>
       <div className={footerStyles.footer_col}>
         <Image
-          src={"/../public/images/img_pcci_logo.png"}
+          src={PCCI_Logo}
           layout='fill'
           objectFit='contain'
           alt='Philippine Chamber of Commerce and Industry Logo'
@@ -117,7 +121,12 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className={footerStyles.footer_col}>
+      <div
+        className={footerStyles.footer_col}
+        style={{
+          textAlign: "center",
+        }}
+      >
         © Copyright 2017 Philippine Chamber of Commerce & Industry. All rights
         reserved.
       </div>
