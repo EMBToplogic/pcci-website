@@ -1,0 +1,56 @@
+.login_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 100vh;
+    width: 100%;
+    /* top: 90px; */
+    position: absolute;
+}
+
+.form_container {
+    height: 100%;
+    width: 50%;
+    background-color: var(--d-black);
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.form_head {
+    font-family: 'Poppins', serif;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.image_container {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.image_overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: rgb(29, 41, 58);
+    background: linear-gradient(90deg, rgba(29, 41, 58, 1) 0%, rgba(29, 41, 58, 0) 100%);
+    z-index: 1;
+    position: relative;
+}
+
+.image_main {
+    z-index: 0;
+}
+
+.form_button_group {
+    display: flex;
+    flex-direction: grid;
+    column-gap: 2%;
+    margin: 1% 0%;
+}
