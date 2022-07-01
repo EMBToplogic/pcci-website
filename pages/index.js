@@ -4,26 +4,29 @@ import Meta from "../components/Meta";
 import Layout from "../components/Layout";
 
 export const getStaticProps = async (context) => {
-  const res = await fetch(`${API_ROUTE}/announcements`);
-  const news = await res.json();
+  const res_news = await fetch(`${API_ROUTE}/announcements`);
+  const news = await res_news.json();
 
-  if (!news) {
+  const res_events = await fetch(`${API_ROUTE}/events`);
+  const events = await res_events.json();
+
+  if (!news || !events) {
     return {
       notFound: true,
     };
   }
 
   return {
-    props: { news },
+    props: { news, events },
   };
 };
 
-export default function Home({ news }) {
+export default function Home({ news, events }) {
   return (
     <div className={styles.container}>
       <Meta />
       <main className={styles.main}>
-        <Layout news={news.data} />
+        <Layout news={news.data} events={events.data} />
       </main>
     </div>
   );

@@ -20,6 +20,7 @@
     width: 25%;
     position: relative;
     margin: 1%;
+    padding: 2.5%;
 }
 
 .footer_list {
@@ -31,4 +32,8 @@
 
 .footer_list_item {
     margin: 5% 0%;
+}
+
+.footer_title {
+    color: var(--white) !important;
 }

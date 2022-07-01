@@ -46,6 +46,7 @@ ul {
 
 h1 {
     font-family: 'Playfair Display', sans-serif;
+    color: var(--black);
 }
 
 .subpage_container {

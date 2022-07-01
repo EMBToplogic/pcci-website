@@ -22,7 +22,7 @@ const Footer = () => {
         />
       </div>
       <div className={footerStyles.footer_col}>
-        <h1 className='footer_title'>Links</h1>
+        <h1 className={footerStyles.footer_title}>Links</h1>
         <ul className={footerStyles.footer_list}>
           <li className={footerStyles.footer_list_item}>
             <Link href='/about'>
@@ -62,7 +62,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className={footerStyles.footer_col}>
-        <h1 className='footer_title'>&nbsp;</h1>
+        <h1 className={footerStyles.footer_title}>&nbsp;</h1>
         <ul className={footerStyles.footer_list}>
           <li className={footerStyles.footer_list_item}>
             <Link href='/events'>
@@ -102,7 +102,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className={footerStyles.footer_col}>
-        <h1 className='footer_title'>Social</h1>
+        <h1 className={footerStyles.footer_title}>Social</h1>
         <ul className={footerStyles.footer_list}>
           <li className={footerStyles.footer_list_item}>
             <Link href='https://www.facebook.com/pcciofficial/'>

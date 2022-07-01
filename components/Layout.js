@@ -15,13 +15,13 @@ const CorporateSponsors = dynamic(() => import("./home/CorporateSponsors"), {
   ssr: false,
 });
 
-const Layout = ({ news }) => {
+const Layout = ({ news, events }) => {
   return (
     <>
       <Navbar />
       <Hero />
       <News news={news} />
-      <Events />
+      <Events events={events} />
       <CorporateSponsors />
       <Footer />
     </>
