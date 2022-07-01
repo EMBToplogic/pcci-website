@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dayjs": "^1.11.3",
+    "framer-motion": "^6.3.16",
     "next": "12.2.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-feather": "^2.0.10"
   },
   "devDependencies": {
     "eslint": "8.18.0",

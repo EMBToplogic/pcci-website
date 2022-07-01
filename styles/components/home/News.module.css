@@ -1,0 +1,19 @@
+.news_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: var(--white);
+}
+
+.news_inner {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column: 3;
+    grid-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    height: 100%;
+    margin: 3% 0%;
+}

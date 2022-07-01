@@ -1,0 +1,17 @@
+.news_page_container {
+    height: 100%;
+    width: 100%;
+    margin-top: 2.5%;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-column: 4;
+    column-gap: 10px;
+    overflow-y: scroll;
+    grid-auto-flow: column;
+}
+
+.news_details_container {
+    color: var(--txt-secondary);
+    width: 100%;
+    margin-top: 2em;
+}
