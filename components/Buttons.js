@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // CSS
 
@@ -7,23 +8,29 @@ import buttonStyles from "../styles/components/Buttons.module.css";
 const Buttons = ({ ...props }) => {
   if (props.type === "primary") {
     return (
-      <div
+      <motion.div
         className={buttonStyles.button_primary}
         onClick={props.onClick ? () => props.onClick() : null}
         style={props.customStyles}
+        whileHover={{
+          backgroundColor: "var(--primary)",
+        }}
       >
         {props.text}
-      </div>
+      </motion.div>
     );
   } else {
     return (
-      <div
+      <motion.div
         className={buttonStyles.button_secondary}
         onClick={props.onClick ? () => props.onClick() : null}
         style={props.customStyles}
+        whileHover={{
+          backgroundColor: "var(--primary)",
+        }}
       >
         {props.text}
-      </div>
+      </motion.div>
     );
   }
 };

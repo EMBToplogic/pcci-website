@@ -18,7 +18,7 @@ import { Menu } from "react-feather";
 
 import PCCI_Logo from "../public/images/img_pcci_logo.png";
 
-const Navbar = () => {
+const Navbar = ({ isLogin, isSignUp }) => {
   return (
     <div className={navStyles.navbar_container}>
       <div className={navStyles.navbar_img_container}>
@@ -33,43 +33,45 @@ const Navbar = () => {
           </a>
         </Link>
       </div>
-      <ul className={navStyles.navbar_list}>
-        <li className={navStyles.navbar_list_item}>
-          <Link href='about-us'>
-            <a>About Us</a>
-          </Link>
-        </li>
-        <li className={navStyles.navbar_list_item}>
-          <Link href='careers'>
-            <a>Careers</a>
-          </Link>
-        </li>
-        <li className={navStyles.navbar_list_item}>
-          <Link href='membership'>
-            <a>Membership</a>
-          </Link>
-        </li>
-        <li className={navStyles.navbar_list_item}>
-          <Link href='local-chambers'>
-            <a>Local Chambers</a>
-          </Link>
-        </li>
-        <li className={navStyles.navbar_list_item}>
-          <Link href='advocacy'>
-            <a>Advocacy</a>
-          </Link>
-        </li>
-        <li className={navStyles.navbar_list_item}>
-          <Link href='international-affairs'>
-            <a>International Affairs</a>
-          </Link>
-        </li>
-        <li className={navStyles.navbar_list_item}>
-          <Link href='programs'>
-            <a>Programs</a>
-          </Link>
-        </li>
-      </ul>
+      {!isLogin && (
+        <ul className={navStyles.navbar_list}>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='about-us'>
+              <a>About Us</a>
+            </Link>
+          </li>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='careers'>
+              <a>Careers</a>
+            </Link>
+          </li>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='membership'>
+              <a>Membership</a>
+            </Link>
+          </li>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='local-chambers'>
+              <a>Local Chambers</a>
+            </Link>
+          </li>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='advocacy'>
+              <a>Advocacy</a>
+            </Link>
+          </li>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='international-affairs'>
+              <a>International Affairs</a>
+            </Link>
+          </li>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='programs'>
+              <a>Programs</a>
+            </Link>
+          </li>
+        </ul>
+      )}
       <div className={navStyles.navbar_btn_container}>
         <Buttons
           text={
@@ -77,7 +79,7 @@ const Navbar = () => {
               <a>Login</a>
             </Link>
           }
-          type='secondary'
+          type={!isLogin ? "secondary" : "primary"}
           customStyles={{ margin: "0px 5px" }}
         />
         <Buttons
@@ -86,7 +88,7 @@ const Navbar = () => {
               <a>Sign-up</a>
             </Link>
           }
-          type='secondary'
+          type={!isSignUp ? "secondary" : "primary"}
           customStyles={{ margin: "0px 5px" }}
         />
         <Menu style={{ margin: "15px" }} />
