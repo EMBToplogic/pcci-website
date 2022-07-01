@@ -11,10 +11,12 @@ import Header from "../../components/Header";
 // CSS
 
 import newsPageStyles from "../../styles/news/NewsPage.module.css";
+import Meta from "../../components/Meta";
 
 const NewsDetails = ({ news }) => {
   return (
     <>
+      <Meta title={news[0].title} />
       <BackButton />
       <Navbar />
       <div className='subpage_container'>
