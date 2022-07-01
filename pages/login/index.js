@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Components
 
@@ -45,7 +46,12 @@ const Login = () => {
               <label>Email Address</label>
               <input type='text' name='name' required />
               <div className='input_group_icon'>
-                <Image src={Email} layout='fill' objectFit='contain' />
+                <Image
+                  src={Email}
+                  layout='fill'
+                  objectFit='contain'
+                  alt='Email Icon'
+                />
               </div>
             </div>
             <div className='input_group'>
@@ -64,6 +70,7 @@ const Login = () => {
                     setIsPasswordShown(!isPasswordShown);
                   }}
                   style={{ cursor: "pointer" }}
+                  alt='Password Icon'
                 />
               </div>
             </div>
@@ -85,7 +92,12 @@ const Login = () => {
                 }}
               />
             </div>
-            <Checkbox title={"Remember Me"} />
+            <div className={loginStyles.form_footer}>
+              <Checkbox title={"Remember Me"} />
+              <Link href='/'>
+                <a>Forgot Password?</a>
+              </Link>
+            </div>
           </form>
         </div>
         <div className={loginStyles.image_container}>
@@ -95,6 +107,7 @@ const Login = () => {
             layout='fill'
             objectFit='cover'
             className={loginStyles.image_main}
+            alt='Philippine Chamber of Commerce and Industry Building'
           />
         </div>
       </div>

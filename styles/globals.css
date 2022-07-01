@@ -38,6 +38,14 @@ input {
     margin: 10px 0;
 }
 
+input:-webkit-autofill {
+    color: var(--primary) !important;
+}
+
+input:-webkit-autofill:focus {
+    color: var(--primary) !important;
+}
+
 input[type="checkbox"] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

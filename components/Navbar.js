@@ -73,15 +73,15 @@ const Navbar = ({ isLogin, isSignUp }) => {
         </ul>
       )}
       <div className={navStyles.navbar_btn_container}>
-        <Buttons
-          text={
-            <Link href='login'>
-              <a>Login</a>
-            </Link>
-          }
-          type={!isLogin ? "secondary" : "primary"}
-          customStyles={{ margin: "0px 5px" }}
-        />
+        <Link href='login'>
+          <a>
+            <Buttons
+              text='Login'
+              type={!isLogin ? "secondary" : "primary"}
+              customStyles={{ margin: "0px 5px" }}
+            />
+          </a>
+        </Link>
         <Buttons
           text={
             <Link href='sign-up'>

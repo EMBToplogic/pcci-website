@@ -17,8 +17,8 @@ const Checkbox = ({ title }) => {
 
   const checkboxAnimationRef = useSpringRef();
   const checkboxAnimationStyle = useSpring({
-    backgroundColor: isChecked ? "var(--primary)" : "transparent",
-    borderColor: isChecked ? "var(--primary)" : "var(--white)",
+    backgroundColor: isChecked ? "#6D7EFF" : "transparent",
+    borderColor: isChecked ? "#6D7EFF" : "#fff",
     config: config.gentle,
     ref: checkboxAnimationRef,
   });
@@ -72,9 +72,9 @@ const Checkbox = ({ title }) => {
                 setCheckmarkLength(ref.getTotalLength());
               }
             }}
-            stroke-linecap='round'
-            stroke-linejoin='round'
-            stroke-width='2'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth='2'
           />
         </animated.svg>
         {title}

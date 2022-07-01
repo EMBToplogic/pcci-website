@@ -26,8 +26,8 @@ const Events = ({ events }) => {
         }
       />
       <div className={eventStyles.events_inner}>
-        {events.map((event) => {
-          return <EventsGridContainer event={event} />;
+        {events.map((event, index) => {
+          return <EventsGridContainer event={event} key={index} />;
         })}
       </div>
     </div>

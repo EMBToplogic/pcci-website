@@ -33,7 +33,7 @@ const News = ({ news }) => {
       />
       <div className={newsStyles.news_inner}>
         {news.map((news, index) => {
-          return <NewsGridContainer news={news} key={news} />;
+          return <NewsGridContainer news={news} key={news.announcementcode} />;
         })}
       </div>
     </div>
