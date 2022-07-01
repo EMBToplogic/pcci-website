@@ -100,14 +100,11 @@ const Events = () => {
       <Header
         title={"Upcoming Events"}
         customButton={
-          <Buttons
-            text={
-              <Link href='events'>
-                <a>See All Events</a>
-              </Link>
-            }
-            type='primary'
-          />
+          <Link href='events'>
+            <a>
+              <Buttons text='See All Events' type='primary' />
+            </a>
+          </Link>
         }
       />
       <div className={eventStyles.events_inner}>

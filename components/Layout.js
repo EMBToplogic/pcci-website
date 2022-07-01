@@ -1,4 +1,3 @@
-import { API_ROUTE } from "../config";
 import React from "react";
 import dynamic from "next/dynamic";
 

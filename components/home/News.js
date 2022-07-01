@@ -24,14 +24,11 @@ const News = ({ news }) => {
       <Header
         title={"News"}
         customButton={
-          <Buttons
-            text={
-              <Link href='news'>
-                <a>View All Articles</a>
-              </Link>
-            }
-            type='primary'
-          />
+          <Link href='news'>
+            <a>
+              <Buttons text='View All Articles' type='primary' />
+            </a>
+          </Link>
         }
       />
       <div className={newsStyles.news_inner}>

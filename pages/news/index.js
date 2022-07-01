@@ -8,6 +8,7 @@ import Navbar from "../../components/Navbar";
 import Header from "../../components/Header";
 import NewsGridContainer from "../../components/NewsGridContainer";
 import BackButton from "../../components/BackButton";
+import Meta from "../../components/Meta";
 
 // CSS
 
@@ -16,6 +17,7 @@ import newsPageStyles from "../../styles/news/NewsPage.module.css";
 const NewsPage = ({ news }) => {
   return (
     <>
+      <Meta title='News' />
       <BackButton />
       <Navbar />
       <div className='subpage_container'>
