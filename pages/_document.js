@@ -15,6 +15,11 @@ export default function Document() {
         rel='stylesheet'
         type='text/css'
       />
+      <link
+        href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
+        rel='stylesheet'
+        type='text/css'
+      />
       <body>
         <Main />
         <NextScript />
