@@ -39,7 +39,7 @@ const Login = () => {
   return (
     <>
       <Menu props={{ isMenuOpen, setIsMenuOpen }} />
-      <Navbar props={{ isMenuOpen, setIsMenuOpen }} isLogin={true} />
+      <Navbar props={{ isMenuOpen, setIsMenuOpen }} />
       <Meta title='Login' />
       <div className={loginStyles.login_container}>
         <div className={loginStyles.form_container}>

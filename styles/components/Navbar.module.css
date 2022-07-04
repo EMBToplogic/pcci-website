@@ -81,7 +81,6 @@
 .dropdown_menu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: baseline;
     position: absolute;
     padding: 25px 0 !important;
@@ -89,6 +88,9 @@
     margin: 20px 0 !important;
     border-radius: 5px;
     top: 50px;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .dropdown_item {
@@ -111,4 +113,13 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.navbar_expand_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    cursor: pointer;
 }

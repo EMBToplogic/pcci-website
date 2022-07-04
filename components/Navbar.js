@@ -18,7 +18,7 @@ import PCCI_Logo from "../public/images/img_pcci_logo.png";
 
 // Icons
 
-import { ChevronDown } from "react-feather";
+import { ChevronDown, ChevronLeft } from "react-feather";
 
 const MenuBtn = ({ isMenuOpen }) => {
   const strokeOneVariants = {
@@ -133,6 +133,7 @@ const Dropdown = ({ dropdownFilter, setHoveredNav }) => {
                 whileHover={{
                   backgroundColor: "var(--secondary)",
                   scale: 1.1,
+                  x: 0,
                   borderRadius: 10,
                   transition: {
                     ease: [0.6, 0.01, -0.05, 0.95],
@@ -152,8 +153,9 @@ const Dropdown = ({ dropdownFilter, setHoveredNav }) => {
   );
 };
 
-const Navbar = ({ props, isLogin, isSignUp }) => {
+const Navbar = ({ props, isSignUp }) => {
   const [hoveredNav, setHoveredNav] = useState("");
+  const [isNavbarExpanded, setIsNavbarExpanded] = useState(false);
 
   const caretVariant = {
     initial: {
@@ -179,8 +181,29 @@ const Navbar = ({ props, isLogin, isSignUp }) => {
           </a>
         </Link>
       </div>
-      {!isLogin && (
-        <ul className={navStyles.navbar_list}>
+      <AnimatePresence exitBeforeEnter>
+        <motion.ul
+          className={navStyles.navbar_list}
+          initial={{
+            opacity: 0,
+            x: -50,
+            pointerEvents: "auto",
+          }}
+          animate={{
+            opacity: !isNavbarExpanded ? 1 : 0,
+            x: !isNavbarExpanded ? 0 : -50,
+            pointerEvents: isNavbarExpanded ? "none" : "auto",
+          }}
+          exit={{
+            opacity: 0,
+            x: -50,
+            pointerEvents: "auto",
+          }}
+          transition={{
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 0.6,
+          }}
+        >
           <li
             className={navStyles.navbar_list_item}
             onMouseEnter={() => {
@@ -243,36 +266,184 @@ const Navbar = ({ props, isLogin, isSignUp }) => {
               )}
             </AnimatePresence>
           </li>
-        </ul>
-      )}
-      <div className={navStyles.navbar_btn_container}>
-        <Link href='login'>
-          <a>
-            <Buttons
-              text='Login'
-              type={!isLogin ? "secondary" : "primary"}
-              customStyles={{ margin: "0px 5px" }}
-            />
-          </a>
-        </Link>
-        <Buttons
-          text={
-            <Link href='sign-up'>
-              <a>Sign-up</a>
+
+          <li
+            className={navStyles.navbar_list_item}
+            onMouseEnter={() => {
+              setHoveredNav("international-affairs");
+            }}
+            onMouseLeave={() => {
+              setHoveredNav("");
+            }}
+          >
+            <Link href='international-affairs'>
+              <a className={navStyles.dropdown_link}>
+                <span>International Affairs</span>
+                <motion.div
+                  className={navStyles.dropdown_caret_cont}
+                  variants={caretVariant}
+                  initial='initial'
+                  animate={
+                    hoveredNav === "international-affairs"
+                      ? "animate"
+                      : "initial"
+                  }
+                >
+                  <ChevronDown />
+                </motion.div>
+              </a>
             </Link>
-          }
-          type={!isSignUp ? "secondary" : "primary"}
-          customStyles={{ margin: "0px 5px" }}
-        />
+            <AnimatePresence>
+              {hoveredNav === "international-affairs" && (
+                <Dropdown
+                  dropdownFilter={"international-affairs"}
+                  setHoveredNav={setHoveredNav}
+                />
+              )}
+            </AnimatePresence>
+          </li>
+          <li
+            className={navStyles.navbar_list_item}
+            onMouseEnter={() => {
+              setHoveredNav("membership");
+            }}
+            onMouseLeave={() => {
+              setHoveredNav("");
+            }}
+          >
+            <Link href='membership'>
+              <a className={navStyles.dropdown_link}>
+                <span>Membership</span>
+                <motion.div
+                  className={navStyles.dropdown_caret_cont}
+                  variants={caretVariant}
+                  initial='initial'
+                  animate={hoveredNav === "membership" ? "animate" : "initial"}
+                >
+                  <ChevronDown />
+                </motion.div>
+              </a>
+            </Link>
+            <AnimatePresence>
+              {hoveredNav === "membership" && (
+                <Dropdown
+                  dropdownFilter={"membership"}
+                  setHoveredNav={setHoveredNav}
+                />
+              )}
+            </AnimatePresence>
+          </li>
+          <li
+            className={navStyles.navbar_list_item}
+            onMouseEnter={() => {
+              setHoveredNav("programs-and-services");
+            }}
+            onMouseLeave={() => {
+              setHoveredNav("");
+            }}
+          >
+            <Link href='programs-and-services'>
+              <a className={navStyles.dropdown_link}>
+                <span>Programs & Services</span>
+                <motion.div
+                  className={navStyles.dropdown_caret_cont}
+                  variants={caretVariant}
+                  initial='initial'
+                  animate={
+                    hoveredNav === "programs-and-services"
+                      ? "animate"
+                      : "initial"
+                  }
+                >
+                  <ChevronDown />
+                </motion.div>
+              </a>
+            </Link>
+            <AnimatePresence>
+              {hoveredNav === "programs-and-services" && (
+                <Dropdown
+                  dropdownFilter={"programs-and-services"}
+                  setHoveredNav={setHoveredNav}
+                />
+              )}
+            </AnimatePresence>
+          </li>
+          <li className={navStyles.navbar_list_item}>
+            <Link href='programs-and-services'>
+              <a className={navStyles.dropdown_link}>
+                <span>Trainings and Seminars</span>
+              </a>
+            </Link>
+          </li>
+        </motion.ul>
         <motion.div
-          className={navStyles.navbar_menu_icon_cont}
+          className={navStyles.navbar_expand_container}
           onClick={() => {
-            props.setIsMenuOpen(!props.isMenuOpen);
+            setIsNavbarExpanded(!isNavbarExpanded);
+          }}
+          initial={{
+            rotate: 0,
+          }}
+          animate={{
+            rotate: isNavbarExpanded ? 180 : 0,
+            color: isNavbarExpanded ? "var(--primary) !important" : "#fff",
           }}
         >
-          <MenuBtn isMenuOpen={props.isMenuOpen} />
+          <ChevronLeft />
         </motion.div>
-      </div>
+        <motion.div
+          className={navStyles.navbar_btn_container}
+          initial={{
+            opacity: 0,
+            width: 0,
+            x: 100,
+            pointerEvents: "none",
+          }}
+          animate={{
+            opacity: isNavbarExpanded ? 1 : 0,
+            width: isNavbarExpanded ? "auto" : 0,
+            x: isNavbarExpanded ? 1 : 0,
+            pointerEvents: isNavbarExpanded ? "auto" : "none",
+          }}
+          exit={{
+            opacity: 0,
+            width: 0,
+            x: 100,
+            pointerEvents: "none",
+          }}
+          transition={{
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 0.6,
+          }}
+        >
+          <Link href='login'>
+            <a>
+              <Buttons
+                text='Login'
+                type='secondary'
+                customStyles={{ margin: "0px 5px" }}
+              />
+            </a>
+          </Link>
+          <Buttons
+            text={
+              <Link href='sign-up'>
+                <a>Sign-up</a>
+              </Link>
+            }
+            type={!isSignUp ? "secondary" : "primary"}
+            customStyles={{ margin: "0px 5px" }}
+          />
+        </motion.div>
+      </AnimatePresence>
+      <motion.div
+        className={navStyles.navbar_menu_icon_cont}
+        onClick={() => {
+          props.setIsMenuOpen(!props.isMenuOpen);
+        }}
+      >
+        <MenuBtn isMenuOpen={props.isMenuOpen} />
+      </motion.div>
     </div>
   );
 };
