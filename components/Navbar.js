@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 
 // Components
 
@@ -18,7 +19,93 @@ import { Menu } from "react-feather";
 
 import PCCI_Logo from "../public/images/img_pcci_logo.png";
 
-const Navbar = ({ isLogin, isSignUp }) => {
+const MenuBtn = ({ isMenuOpen }) => {
+  const menuBtnVariants = {
+    intitial: {
+      // rotate: 0,
+    },
+    animate: {
+      // rotate: 90,
+    },
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 0.3,
+    },
+  };
+
+  const strokeOneVariants = {
+    initial: {
+      y: 0,
+      rotate: 0,
+      border: "1px solid var(--white)",
+    },
+    animate: {
+      y: 8,
+      rotate: 45,
+      border: "1px solid var(--primary)",
+    },
+  };
+
+  const strokeTwoVariants = {
+    initial: {
+      x: 0,
+      opacity: 1,
+    },
+    animate: {
+      x: -25,
+      opacity: 0,
+      pointerEvents: "none",
+    },
+  };
+
+  const strokeThreeVariants = {
+    initial: {
+      y: 0,
+      rotate: 0,
+      border: "1px solid var(--white)",
+    },
+    animate: {
+      y: -4,
+      rotate: -45,
+      border: "1px solid var(--primary)",
+    },
+  };
+
+  return (
+    <>
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          className={navStyles.navbar_menu_icon_main}
+          variants={menuBtnVariants}
+          initial='initial'
+          animate={isMenuOpen ? "animate" : "initial"}
+          transition='transition'
+        >
+          <motion.span
+            variants={strokeOneVariants}
+            initial='initial'
+            animate={isMenuOpen ? "animate" : "initial"}
+            transition='transition'
+          ></motion.span>
+          <motion.span
+            variants={strokeTwoVariants}
+            initial='initial'
+            animate={isMenuOpen ? "animate" : "initial"}
+            transition='transition'
+          ></motion.span>
+          <motion.span
+            variants={strokeThreeVariants}
+            initial='initial'
+            animate={isMenuOpen ? "animate" : "initial"}
+            transition='transition'
+          ></motion.span>
+        </motion.div>
+      </AnimatePresence>
+    </>
+  );
+};
+
+const Navbar = ({ props, isLogin, isSignUp }) => {
   return (
     <div className={navStyles.navbar_container}>
       <div className={navStyles.navbar_img_container}>
@@ -91,7 +178,15 @@ const Navbar = ({ isLogin, isSignUp }) => {
           type={!isSignUp ? "secondary" : "primary"}
           customStyles={{ margin: "0px 5px" }}
         />
-        <Menu style={{ margin: "15px" }} />
+        <motion.div
+          className={navStyles.navbar_menu_icon_cont}
+          onClick={() => {
+            props.setIsMenuOpen(!props.isMenuOpen);
+          }}
+        >
+          {/* <Menu style={{ margin: "15px" }} /> */}
+          <MenuBtn isMenuOpen={props.isMenuOpen} />
+        </motion.div>
       </div>
     </div>
   );

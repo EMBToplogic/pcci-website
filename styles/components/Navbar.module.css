@@ -43,3 +43,30 @@
     align-items: center;
     margin-left: auto;
 }
+
+.navbar_menu_icon_cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.navbar_menu_icon_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20px;
+    height: 25px;
+}
+
+.navbar_menu_icon_main>span {
+    width: 100%;
+    border: 1px solid var(--white);
+    margin: 2px 0px;
+    border-radius: 10px;
+}
