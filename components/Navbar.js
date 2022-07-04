@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // Components
 
 import Buttons from "./Buttons";
+import { MenuItems } from "./MenuItems";
 
 // CSS
 
@@ -14,6 +15,10 @@ import navStyles from "../styles/components/Navbar.module.css";
 // Images
 
 import PCCI_Logo from "../public/images/img_pcci_logo.png";
+
+// Icons
+
+import { ChevronDown } from "react-feather";
 
 const MenuBtn = ({ isMenuOpen }) => {
   const strokeOneVariants = {
@@ -82,7 +87,84 @@ const MenuBtn = ({ isMenuOpen }) => {
   );
 };
 
+const Dropdown = ({ dropdownFilter, setHoveredNav }) => {
+  const filteredMenu = MenuItems.filter((filteredItem) => {
+    if (filteredItem.parent === dropdownFilter) {
+      return filteredItem;
+    }
+  });
+
+  const dropdownVariants = {
+    initial: {
+      opacity: 0,
+      y: -10,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+    exit: {
+      y: 10,
+      opacity: 0,
+    },
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 0.6,
+      delay: 0.6,
+    },
+  };
+
+  return (
+    <>
+      <motion.ul
+        className={navStyles.dropdown_menu}
+        variants={dropdownVariants}
+        initial='initial'
+        animate='animate'
+        exit='exit'
+        transition='transition'
+        onMouseEnter={() => setHoveredNav(dropdownFilter)}
+      >
+        {filteredMenu.map((menuItem, index) => {
+          return (
+            <React.Fragment key={menuItem.path}>
+              <motion.div
+                className={navStyles.dropdown_item}
+                whileHover={{
+                  backgroundColor: "var(--secondary)",
+                  scale: 1.1,
+                  borderRadius: 10,
+                  transition: {
+                    ease: [0.6, 0.01, -0.05, 0.95],
+                    duration: 0.3,
+                  },
+                }}
+              >
+                <Link href={menuItem.path}>
+                  <a>{menuItem.title}</a>
+                </Link>
+              </motion.div>
+            </React.Fragment>
+          );
+        })}
+      </motion.ul>
+    </>
+  );
+};
+
 const Navbar = ({ props, isLogin, isSignUp }) => {
+  const [hoveredNav, setHoveredNav] = useState("");
+
+  const caretVariant = {
+    initial: {
+      rotate: 0,
+    },
+    animate: {
+      rotate: 180,
+      color: "var(--primary)",
+    },
+  };
+
   return (
     <div className={navStyles.navbar_container}>
       <div className={navStyles.navbar_img_container}>
@@ -99,40 +181,67 @@ const Navbar = ({ props, isLogin, isSignUp }) => {
       </div>
       {!isLogin && (
         <ul className={navStyles.navbar_list}>
-          <li className={navStyles.navbar_list_item}>
+          <li
+            className={navStyles.navbar_list_item}
+            onMouseEnter={() => {
+              setHoveredNav("about");
+            }}
+            onMouseLeave={() => {
+              setHoveredNav("");
+            }}
+          >
             <Link href='about-us'>
-              <a>About Us</a>
+              <a className={navStyles.dropdown_link}>
+                <span>About Us</span>
+                <motion.div
+                  className={navStyles.dropdown_caret_cont}
+                  variants={caretVariant}
+                  initial='initial'
+                  animate={hoveredNav === "about" ? "animate" : "initial"}
+                >
+                  <ChevronDown />
+                </motion.div>
+              </a>
             </Link>
+            <AnimatePresence>
+              {hoveredNav === "about" && (
+                <Dropdown
+                  dropdownFilter={"about"}
+                  setHoveredNav={setHoveredNav}
+                />
+              )}
+            </AnimatePresence>
           </li>
-          <li className={navStyles.navbar_list_item}>
-            <Link href='careers'>
-              <a>Careers</a>
-            </Link>
-          </li>
-          <li className={navStyles.navbar_list_item}>
-            <Link href='membership'>
-              <a>Membership</a>
-            </Link>
-          </li>
-          <li className={navStyles.navbar_list_item}>
-            <Link href='local-chambers'>
-              <a>Local Chambers</a>
-            </Link>
-          </li>
-          <li className={navStyles.navbar_list_item}>
+          <li
+            className={navStyles.navbar_list_item}
+            onMouseEnter={() => {
+              setHoveredNav("advocacy");
+            }}
+            onMouseLeave={() => {
+              setHoveredNav("");
+            }}
+          >
             <Link href='advocacy'>
-              <a>Advocacy</a>
+              <a className={navStyles.dropdown_link}>
+                <span>Advocacy</span>
+                <motion.div
+                  className={navStyles.dropdown_caret_cont}
+                  variants={caretVariant}
+                  initial='initial'
+                  animate={hoveredNav === "advocacy" ? "animate" : "initial"}
+                >
+                  <ChevronDown />
+                </motion.div>
+              </a>
             </Link>
-          </li>
-          <li className={navStyles.navbar_list_item}>
-            <Link href='international-affairs'>
-              <a>International Affairs</a>
-            </Link>
-          </li>
-          <li className={navStyles.navbar_list_item}>
-            <Link href='programs'>
-              <a>Programs</a>
-            </Link>
+            <AnimatePresence>
+              {hoveredNav === "advocacy" && (
+                <Dropdown
+                  dropdownFilter={"advocacy"}
+                  setHoveredNav={setHoveredNav}
+                />
+              )}
+            </AnimatePresence>
           </li>
         </ul>
       )}

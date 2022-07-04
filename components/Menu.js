@@ -86,6 +86,9 @@ const Menu = ({ props }) => {
                 </li>
                 <li className={menuStyles.menu_list_item}>Secretariat</li>
                 <li className={menuStyles.menu_list_item}>Contact Us</li>
+                <li className={menuStyles.menu_list_item}>
+                  <h1>Careers</h1>
+                </li>
               </motion.ul>
               <motion.ul className={menuStyles.menu_list}>
                 <li className={menuStyles.menu_list_item}>
