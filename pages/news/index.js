@@ -1,10 +1,11 @@
 import { API_ROUTE } from "../../config";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 // Components
 
 import Navbar from "../../components/Navbar";
+import Menu from "../../components/Menu";
 import Header from "../../components/Header";
 import NewsGridContainer from "../../components/NewsGridContainer";
 import BackButton from "../../components/BackButton";
@@ -19,11 +20,13 @@ import newsPageStyles from "../../styles/news/NewsPage.module.css";
 import TheVoiceLogo from "../../public/images/the_voice.png";
 
 const NewsPage = ({ news }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
       <Meta title='News' />
       <BackButton />
-      <Navbar />
+      <Menu props={{ isMenuOpen, setIsMenuOpen }} />
+      <Navbar props={{ isMenuOpen, setIsMenuOpen }} />
       <div className='subpage_container'>
         <div className='subpage_inner_container'>
           <Header

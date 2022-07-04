@@ -5,6 +5,7 @@ import Link from "next/link";
 // Components
 
 import Navbar from "../../components/Navbar";
+import Menu from "../../components/Menu";
 import Meta from "../../components/Meta";
 
 // CSS
@@ -26,6 +27,7 @@ import Checkbox from "../../components/Checkbox";
 const Login = () => {
   const [passImage, setPassImage] = useState(Show);
   const [isPasswordShown, setIsPasswordShown] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     if (isPasswordShown) {
@@ -36,7 +38,8 @@ const Login = () => {
   }, [isPasswordShown]);
   return (
     <>
-      <Navbar isLogin={true} />
+      <Menu props={{ isMenuOpen, setIsMenuOpen }} />
+      <Navbar props={{ isMenuOpen, setIsMenuOpen }} isLogin={true} />
       <Meta title='Login' />
       <div className={loginStyles.login_container}>
         <div className={loginStyles.form_container}>

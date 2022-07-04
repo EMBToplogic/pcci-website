@@ -1,10 +1,11 @@
 import { API_ROUTE } from "../../config";
-import React from "react";
+import React, { useState } from "react";
 import dayjs from "dayjs";
 
 // Components
 
 import Navbar from "../../components/Navbar";
+import Menu from "../../components/Menu";
 import BackButton from "../../components/BackButton";
 import Header from "../../components/Header";
 
@@ -14,11 +15,13 @@ import newsPageStyles from "../../styles/news/NewsPage.module.css";
 import Meta from "../../components/Meta";
 
 const NewsDetails = ({ news }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
       <Meta title={news[0].title} />
       <BackButton />
-      <Navbar />
+      <Menu props={{ isMenuOpen, setIsMenuOpen }} />
+      <Navbar props={{ isMenuOpen, setIsMenuOpen }} />
       <div className='subpage_container'>
         <div className='subpage_inner_container'>
           <Header

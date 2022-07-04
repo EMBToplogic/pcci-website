@@ -11,28 +11,11 @@ import Buttons from "./Buttons";
 
 import navStyles from "../styles/components/Navbar.module.css";
 
-// Icons
-
-import { Menu } from "react-feather";
-
 // Images
 
 import PCCI_Logo from "../public/images/img_pcci_logo.png";
 
 const MenuBtn = ({ isMenuOpen }) => {
-  const menuBtnVariants = {
-    intitial: {
-      // rotate: 0,
-    },
-    animate: {
-      // rotate: 90,
-    },
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 0.3,
-    },
-  };
-
   const strokeOneVariants = {
     initial: {
       y: 0,
@@ -74,13 +57,7 @@ const MenuBtn = ({ isMenuOpen }) => {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
-        <motion.div
-          className={navStyles.navbar_menu_icon_main}
-          variants={menuBtnVariants}
-          initial='initial'
-          animate={isMenuOpen ? "animate" : "initial"}
-          transition='transition'
-        >
+        <motion.div className={navStyles.navbar_menu_icon_main}>
           <motion.span
             variants={strokeOneVariants}
             initial='initial'
@@ -184,7 +161,6 @@ const Navbar = ({ props, isLogin, isSignUp }) => {
             props.setIsMenuOpen(!props.isMenuOpen);
           }}
         >
-          {/* <Menu style={{ margin: "15px" }} /> */}
           <MenuBtn isMenuOpen={props.isMenuOpen} />
         </motion.div>
       </div>
