@@ -50,29 +50,31 @@ const AdvocacySubpage = () => {
                 fontSize: "3em",
               }}
             />
-            <div className='subpage_paragraph'>
-              {activeData[0].data.description}
-            </div>
-            <div className={advocacyStyles.staff_container}>
-              {activeData[0].data.staff.map((staff, index) => {
-                return (
-                  <div
-                    className={advocacyStyles.staff_item}
-                    key={`${staff.name}_${staff.title}_${index}`}
-                  >
-                    <div>
-                      <h2>{staff.name}</h2>
-                      <div></div>
-                      <div>{staff.company}</div>
-                      <div>{staff.desc}</div>
+            <div className='subpage_paragraph_container'>
+              <div className='subpage_paragraph'>
+                {activeData[0].data.description}
+              </div>
+              <div className={advocacyStyles.staff_container}>
+                {activeData[0].data.staff.map((staff, index) => {
+                  return (
+                    <div
+                      className={advocacyStyles.staff_item}
+                      key={`${staff.name}_${staff.title}_${index}`}
+                    >
+                      <div>
+                        <h2>{staff.name}</h2>
+                        <div></div>
+                        <div>{staff.company}</div>
+                        <div>{staff.desc}</div>
+                      </div>
+                      <div className={advocacyStyles.staff_title}>
+                        <h3>{staff.title}</h3>
+                        {staff.subcateg && <div>{staff.subcateg}</div>}
+                      </div>
                     </div>
-                    <div className={advocacyStyles.staff_title}>
-                      <h3>{staff.title}</h3>
-                      {staff.subcateg && <div>{staff.subcateg}</div>}
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

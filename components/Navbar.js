@@ -214,7 +214,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='about-us' replace>
+            <Link href='../about-us' replace={true}>
               <a className={navStyles.dropdown_link}>
                 <span>About Us</span>
                 <motion.div
@@ -245,7 +245,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='advocacy' replace>
+            <Link href='../advocacy' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Advocacy</span>
                 <motion.div
@@ -277,7 +277,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='international-affairs' replace>
+            <Link href='../international-affairs' replace>
               <a className={navStyles.dropdown_link}>
                 <span>International Affairs</span>
                 <motion.div
@@ -312,7 +312,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='membership' replace>
+            <Link href='../membership' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Membership</span>
                 <motion.div
@@ -343,7 +343,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='programs-and-services' replace>
+            <Link href='../programs-and-services' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Programs & Services</span>
                 <motion.div
@@ -370,7 +370,7 @@ const Navbar = ({ props, isSignUp }) => {
             </AnimatePresence>
           </li>
           <li className={navStyles.navbar_list_item}>
-            <Link href='programs-and-services' replace>
+            <Link href='../programs-and-services' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Trainings and Seminars</span>
               </a>
@@ -418,7 +418,7 @@ const Navbar = ({ props, isSignUp }) => {
             duration: 0.6,
           }}
         >
-          <Link href='login' replace>
+          <Link href='../login' replace>
             <a>
               <Buttons
                 text='Login'
@@ -427,7 +427,7 @@ const Navbar = ({ props, isSignUp }) => {
               />
             </a>
           </Link>
-          <Link href='sign-up' replace>
+          <Link href='../sign-up' replace>
             <a>
               <Buttons
                 text='Sign-up'

@@ -122,10 +122,15 @@ h2 {
     overflow-x: hidden;
 }
 
+.subpage_paragraph_container {
+    padding: 1.5em;
+    width: 100%;
+}
+
 .subpage_paragraph {
     color: var(--txt-secondary);
     width: 100%;
-    margin: 1.5em;
+    margin: 1.5em 0%;
 }
 
 .back_button {
