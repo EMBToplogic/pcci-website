@@ -74,6 +74,7 @@ a {
 
 li {
     list-style: none;
+    margin: 1% 0% !important;
 }
 
 ul {
@@ -84,6 +85,14 @@ ul {
 h1 {
     font-family: "Playfair Display", serif;
     color: var(--black);
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
 }
 
 .subpage_container {
@@ -102,7 +111,6 @@ h1 {
 .subpage_inner_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: var(--white);
     height: 100%;
@@ -110,6 +118,14 @@ h1 {
     box-shadow: 0px 10px 20px #010b5709;
     border-radius: 10px;
     padding: 0% 3% 3%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.subpage_paragraph {
+    color: var(--txt-secondary);
+    width: 100%;
+    margin: 1.5em;
 }
 
 .back_button {
@@ -167,4 +183,25 @@ h1 {
  ::-webkit-scrollbar-thumb {
     background: var(--secondary);
     border-radius: 10px;
+}
+
+.ul_secondary {
+    color: var(--txt-secondary);
+}
+
+.ul_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.ul_links_item {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 5px 0px !important;
+    width: 100%;
+    cursor: pointer;
 }

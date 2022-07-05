@@ -1,0 +1,571 @@
+ [{
+         "id": "agriculture-and-fishery",
+         "name": "Agriculture and Fishery",
+         "data": {
+             "description": "Champions policies and programs geared toward modernizing the agriculture and fishery sectors and improving the income of farmers, fisherfolks and enterprises engaged in agribusiness, fishery and strengthening countryside development.",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Dr. William S. Co",
+                 "desc": "President and CEO",
+                 "company": "Hi-Las Marketing Group",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Paul Cuyegkeng",
+                 "desc": "President and CEO",
+                 "company": "Sumifru",
+                 "subcateg": ""
+             }, {
+                 "title": "Co-Chair",
+                 "name": "Mr. Salvador Salacup",
+                 "desc": "Former DA Undersecretary",
+                 "company": "Philippine Food Exporters Confederation",
+                 "subcateg": ""
+             }, {
+                 "title": "Co-Chair",
+                 "name": "Larry Lacson",
+                 "desc": "Former DA-BPI Director",
+                 "company": "Philippine Food Exporters Confederation",
+                 "subcateg": ""
+             }, {
+                 "title": "President",
+                 "name": "Mr. Ruben See",
+                 "desc": "",
+                 "company": "Philippine Food Exporters Confederation",
+                 "subcateg": "Agribusiness and Food Exports"
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Henry Lim Bon Liong",
+                 "desc": "CEO",
+                 "company": "SL Agritech Corp.",
+                 "subcateg": "Grains"
+             }, {
+                 "title": "Chair",
+                 "name": "Atty. Elias Inciong",
+                 "desc": "United Broilers Raisers",
+                 "company": "United Broilers Raisers Association",
+                 "subcateg": "Poultry"
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Danny Sanchez",
+                 "desc": "",
+                 "company": "",
+                 "subcateg": "Livestock"
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Danilo Fausto",
+                 "desc": "",
+                 "company": "",
+                 "subcateg": "Dairy"
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Philip Ong, President",
+                 "desc": "President",
+                 "company": "Santeh Feeds Corp.",
+                 "subcateg": "Fishery"
+             }, {
+                 "title": "",
+                 "name": "Ms. Donna Brazas Angulo",
+                 "desc": "donna.angulo@philippinechamber.com​",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ma. Joanna Paula Pascual",
+                 "desc": "joanna.pascual@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     },
+     {
+         "id": "banking-and-capital-formation",
+         "name": "Banking and Capital Formation",
+         "data": {
+             "description": "Covers issues related to banking and non-bank financial institutions, insurance, securities and securities exchange and issues of financial inclusion and micro-finance.",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. Alfredo M. Yao",
+                 "desc": "President",
+                 "company": "Zest-O Corp.",
+                 "subcateg": ""
+             }, {
+                 "title": "Adviser",
+                 "name": "Mr. Gil A. Buenaventura",
+                 "desc": "Former President",
+                 "company": "RCBC and DBP",
+                 "subcateg": "Banking"
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Edgardo G. Lacson",
+                 "desc": "President",
+                 "company": "MIS Maritime",
+                 "subcateg": "Capital Formation"
+             }, {
+                 "title": "",
+                 "name": "Ms. Donna Brazas Angulo",
+                 "desc": "donna.angulo@philippinechamber.com​",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ma. Joanna Paula Pascual",
+                 "desc": "joanna.pascual@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     },
+     {
+         "id": "corporate-governance",
+         "name": "Corporate Governance",
+         "data": {
+             "description": "Champions the development and adoption of corporate governance practices and regulatory initiatives pertaining to corporate governance.",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. Edgardo G. Lacson",
+                 "desc": "President",
+                 "company": "MIS Maritime (ExCom Member)",
+                 "subcateg": ""
+             }, {
+                 "title": "Adviser",
+                 "name": "Justice Andres Reyes, Jr.",
+                 "desc": "Supreme Court Associate (ret)",
+                 "company": "",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Donna Brazas Angulo",
+                 "desc": "donna.angulo@philippinechamber.com​",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Merryl Abano",
+                 "desc": "merryl.abano@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Lois Ruth Evardone",
+                 "desc": "ruth.evardone@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     },
+     {
+         "id": "energy-and-power",
+         "name": "Energy and Power",
+         "data": {
+             "description": "Maintains principal responsibility in discussing and addressing power and water utilities issues as they relate to business and economic competitiveness.",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. Frank Carbon",
+                 "desc": "CEO",
+                 "company": "Weesam Express",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Jose S. Alejandro",
+                 "desc": "Vice Chair",
+                 "company": "NOW Telecom",
+                 "subcateg": ""
+             }, {
+                 "title": "Co-Chair",
+                 "name": "Mr. David Chua",
+                 "desc": "President",
+                 "company": "Cathay Pacific Steel Corp.",
+                 "subcateg": ""
+             }, {
+                 "title": "Adviser",
+                 "name": "Mr. Oscar S. Reyes",
+                 "desc": "Former President",
+                 "company": "Meralco",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Athena Danielle Quizon",
+                 "desc": "athena.quizon@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ma. Joanna Paula Pascual",
+                 "desc": "joanna.pascual@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "industry-and-trade",
+         "name": "Industry and Trade",
+         "data": {
+             "description": "Provides the forum to explore and find solutions to the challenges faced by the manufacturing industry in the areas of international trade policy and government programs, policies and regulations as well as issues relating to competitiveness specifically those relating to customs and trade administration.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. George T. Barcelon",
+                 "desc": "President",
+                 "company": "PCCI",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Carlos Ramon C. Aboitiz",
+                 "desc": "President and COO",
+                 "company": "HedCor, Aboitiz Power Corp.",
+                 "subcateg": "Industry"
+             }, {
+                 "title": "Co-Chair",
+                 "name": "Ms. Rosemarie Bosch-Ong",
+                 "desc": "President and COO",
+                 "company": "Wilcon Depot, Inc.",
+                 "subcateg": "Trade"
+             }, {
+                 "title": "",
+                 "name": "Ms. Avery Del Mundo",
+                 "desc": "avery.delmundo@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Rhuby Conel",
+                 "desc": "rhuby.conel@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "infrastructure",
+         "name": "Infrastructure",
+         "data": {
+             "description": "Leads in advocacies that promote connectivity and competitiveness.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Arch. Felino Palafox, Jr.",
+                 "desc": "Principal Architect",
+                 "company": "Palafox and Associates, Inc.",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Francis Cruz",
+                 "desc": "President",
+                 "company": "FF Cruz",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Jeanne Aramae Cruz",
+                 "desc": "aramae.cruz@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Athena Danielle Quizon",
+                 "desc": "athena.quizon@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "innovation-and-science-and-technology",
+         "name": "Innovation and Science and Technology",
+         "data": {
+             "description": "Encourages and promotes innovation, technology and research and development for business growth and development.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. Ferdinand A. Ferrer",
+                 "desc": "",
+                 "company": "",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Dennis Anthony H. Uy",
+                 "desc": "Founder and CEO",
+                 "company": "Converge Solutions, Inc.",
+                 "subcateg": "Innovation and Digital Economy"
+             }, {
+                 "title": "Chair",
+                 "name": "Engr. Ramon D. Escueta",
+                 "desc": "President",
+                 "company": "Apsys Solutions and Technologies, Inc",
+                 "subcateg": "Science and Technology"
+             }, {
+                 "title": "",
+                 "name": "Ms. Anya Marie Cruz",
+                 "desc": "anya.cruz@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Avery del Mundo",
+                 "desc": "avery.delmundo@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "intellectual-property",
+         "name": "Intellectual Property",
+         "data": {
+             "description": "Leads in the promotion of the use of intellectual property as a significant component of business development and innovation.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Dr. William S. Co, Chairman",
+                 "desc": "Chairman",
+                 "company": "William and Company Philippines",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Antonio Ll. Sayo",
+                 "desc": "Chairman and President",
+                 "company": "Alay Buhay Community Development Foundation, Inc.",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Anya Marie Cruz",
+                 "desc": "anya.cruz@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Lois Ruth Evardone",
+                 "desc": "ruth.evardone@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "legislation-and-taxation",
+         "name": "Legislation and Taxation",
+         "data": {
+             "description": "Participates in the development of a supportive business and financial environment to encourage new investments and help existing businesses expand.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Atty. Benedicta Du-Baladad",
+                 "desc": "Founding Partner",
+                 "company": "Du-Baladad and Associates",
+                 "subcateg": ""
+             }, {
+                 "title": "Co-Chair",
+                 "name": "Atty. Anthony Bengzon",
+                 "desc": "Senior Partner",
+                 "company": "Bengzon, Negre, Untalan",
+                 "subcateg": "Legislation"
+             }, {
+                 "title": "Co-Chair",
+                 "name": "Mr. Calixto V. Chikiamco",
+                 "desc": "Founder and President",
+                 "company": "MRM Studios, Inc.",
+                 "subcateg": "Legislation"
+             }, {
+                 "title": "Chair",
+                 "name": "Atty. Carlos Carado, II",
+                 "desc": "Tax Partner",
+                 "company": "PWC Philippines",
+                 "subcateg": "Taxation"
+             }, {
+                 "title": "Co-Chair",
+                 "name": "Mr. Wendell Ganhinhin",
+                 "desc": "Partner and Head-Cebu Office",
+                 "company": "P&A Grant Thornton",
+                 "subcateg": "Taxation"
+             }, {
+                 "title": "",
+                 "name": "Ms. Lois Ruth Evardone",
+                 "desc": "ruth.evardone@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Rhuby Conel",
+                 "desc": "rhuby.conel@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "mining-and-mineral-resources",
+         "name": "Mining and Mineral Resources",
+         "data": {
+             "description": "Provides leadership on issues relating to the exploration and development, conservation, management and utilization of mines and mineral resources.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. Benjamin Philip G. Romualdez",
+                 "desc": "President",
+                 "company": "Benguet Corp.",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Dante Bravo",
+                 "desc": "President and CEO",
+                 "company": "Global Ferronickel Holdings, Inc.",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Avery Del Mundo",
+                 "desc": "avery.delmundo@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Rhuby Conel",
+                 "desc": "rhuby.conel@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "sustainable-development-goals",
+         "name": "Sustainable Development Goals",
+         "data": {
+             "description": "Leads the institutionalization of the development priorities of SDGs in the advocacies and programs of PCCI, establishing the role of the business sector to achieve a better and more sustainable future for all.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Ms. Alegria Sibal Limjoco",
+                 "desc": "",
+                 "company": "Franchise Asia (ExCom Member)",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Joel Ryan Tugade",
+                 "desc": "President",
+                 "company": "Coolaire Consolidated, Inc.",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Jeanne Aramae Cruz",
+                 "desc": "aramae.cruz@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Ma. Joanna Paula Pascual",
+                 "desc": "joanna.pascual@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "transport-logistics",
+         "name": "Transport Logistics",
+         "data": {
+             "description": "Provides the forum for members to discuss issues in the transportation and logistics sector such as shipping lines, airlines, freight forwarders, logistics service providers, air express operators, warehouse operators, and other related services.  Works closely with the Committees on Industry and Infrastructure to promote connectivity and competitiveness.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. Michael G. Tan",
+                 "desc": "President and COO",
+                 "company": "LT Group",
+                 "subcateg": ""
+             }, {
+                 "title": "Adviser",
+                 "name": "Dr. Henry L. Basilio",
+                 "desc": "",
+                 "company": "",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Pierre Carlo Curay",
+                 "desc": "President",
+                 "company": "Supply Chain Management Association of the Philippines",
+                 "subcateg": "Supply Chain Management"
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Agapito “Terry’ Capistrano",
+                 "desc": "CEO",
+                 "company": "TMS Ship Agencies, Inc.",
+                 "subcateg": "Shipping"
+             }, {
+                 "title": "Adviser",
+                 "name": "Mr. Christian Gonzalez",
+                 "desc": "Executive Vice President",
+                 "company": "ICTSI",
+                 "subcateg": "Ports Operation"
+             }, {
+                 "title": "",
+                 "name": "Ms. Jeanne Aramae Cruz",
+                 "desc": "aramae.cruz@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Athena Danielle Quizon",
+                 "desc": "athena.quizon@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "urban-housing-development",
+         "name": "Urban Housing Development",
+         "data": {
+             "description": "Takes up programs and advocacies relating to housing and management of urbanization issues and concerns such as urban planning and development and urban land reform ensuring that developments in these area promote economic productivity and quality of life.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. Jeffrey T. Ng",
+                 "desc": "President",
+                 "company": "Cathay Land, Inc.",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Mr. Cesar Lee-Hiong L. Wee, Jr.",
+                 "desc": "President",
+                 "company": "Aura South Prime Developers, Inc.",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Jeanne Aramae Cruz",
+                 "desc": "aramae.cruz@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Athena Danielle Quizon",
+                 "desc": "athena.quizon@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }, {
+         "id": "youth",
+         "name": "Youth",
+         "data": {
+             "description": "Brings together aspiring and young entrepreneurs to connect and network with the business community.  Works closely with the Membership Committee in conducting mentoring, internships and career placement activities and opportunities.​",
+             "staff": [{
+                 "title": "Director",
+                 "name": "Mr. George T. Barcelon",
+                 "desc": "President",
+                 "company": "PCCI",
+                 "subcateg": ""
+             }, {
+                 "title": "Chair",
+                 "name": "Ms. Charmaine Co",
+                 "desc": "",
+                 "company": "",
+                 "subcateg": ""
+             }, {
+                 "title": "Vice Chair",
+                 "name": "Mr. Gio Ortiz-Luis",
+                 "desc": "",
+                 "company": "",
+                 "subcateg": ""
+             }, {
+                 "title": "Adviser",
+                 "name": "Mr. Joel Ryan Tugade",
+                 "desc": "President",
+                 "company": "Coolaire Consolidated, Inc.",
+                 "subcateg": ""
+             }, {
+                 "title": "",
+                 "name": "Ms. Athena Danielle Quizon",
+                 "desc": "athena.quizon@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }, {
+                 "title": "",
+                 "name": "Ms. Anya Marie Cruz",
+                 "desc": "anya.cruz@philippinechamber.com",
+                 "company": "",
+                 "subcateg": "Staff-in-charge"
+             }]
+         }
+     }
+ ]

@@ -128,23 +128,23 @@ const Dropdown = ({ dropdownFilter, setHoveredNav }) => {
         {filteredMenu.map((menuItem, index) => {
           return (
             <React.Fragment key={menuItem.path}>
-              <motion.div
-                className={navStyles.dropdown_item}
-                whileHover={{
-                  backgroundColor: "var(--secondary)",
-                  scale: 1.1,
-                  x: 0,
-                  borderRadius: 10,
-                  transition: {
-                    ease: [0.6, 0.01, -0.05, 0.95],
-                    duration: 0.3,
-                  },
-                }}
-              >
-                <Link href={menuItem.path}>
+              <Link href={menuItem.path} replace>
+                <motion.div
+                  className={navStyles.dropdown_item}
+                  whileHover={{
+                    backgroundColor: "var(--secondary)",
+                    scale: 1.1,
+                    x: 0,
+                    borderRadius: 10,
+                    transition: {
+                      ease: [0.6, 0.01, -0.05, 0.95],
+                      duration: 0.3,
+                    },
+                  }}
+                >
                   <a>{menuItem.title}</a>
-                </Link>
-              </motion.div>
+                </motion.div>
+              </Link>
             </React.Fragment>
           );
         })}
@@ -170,7 +170,7 @@ const Navbar = ({ props, isSignUp }) => {
   return (
     <div className={navStyles.navbar_container}>
       <div className={navStyles.navbar_img_container}>
-        <Link href='/'>
+        <Link href='/' replace>
           <a>
             <Image
               src={PCCI_Logo}
@@ -181,7 +181,7 @@ const Navbar = ({ props, isSignUp }) => {
           </a>
         </Link>
       </div>
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence>
         <motion.ul
           className={navStyles.navbar_list}
           initial={{
@@ -203,6 +203,7 @@ const Navbar = ({ props, isSignUp }) => {
             ease: [0.6, 0.01, -0.05, 0.95],
             duration: 0.6,
           }}
+          key={navStyles.navbar_list}
         >
           <li
             className={navStyles.navbar_list_item}
@@ -213,7 +214,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='about-us'>
+            <Link href='about-us' replace>
               <a className={navStyles.dropdown_link}>
                 <span>About Us</span>
                 <motion.div
@@ -244,7 +245,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='advocacy'>
+            <Link href='advocacy' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Advocacy</span>
                 <motion.div
@@ -276,7 +277,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='international-affairs'>
+            <Link href='international-affairs' replace>
               <a className={navStyles.dropdown_link}>
                 <span>International Affairs</span>
                 <motion.div
@@ -311,7 +312,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='membership'>
+            <Link href='membership' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Membership</span>
                 <motion.div
@@ -342,7 +343,7 @@ const Navbar = ({ props, isSignUp }) => {
               setHoveredNav("");
             }}
           >
-            <Link href='programs-and-services'>
+            <Link href='programs-and-services' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Programs & Services</span>
                 <motion.div
@@ -369,7 +370,7 @@ const Navbar = ({ props, isSignUp }) => {
             </AnimatePresence>
           </li>
           <li className={navStyles.navbar_list_item}>
-            <Link href='programs-and-services'>
+            <Link href='programs-and-services' replace>
               <a className={navStyles.dropdown_link}>
                 <span>Trainings and Seminars</span>
               </a>
@@ -388,6 +389,7 @@ const Navbar = ({ props, isSignUp }) => {
             rotate: isNavbarExpanded ? 180 : 0,
             color: isNavbarExpanded ? "var(--primary) !important" : "#fff",
           }}
+          key={navStyles.navbar_expand_container}
         >
           <ChevronLeft />
         </motion.div>
@@ -416,7 +418,7 @@ const Navbar = ({ props, isSignUp }) => {
             duration: 0.6,
           }}
         >
-          <Link href='login'>
+          <Link href='login' replace>
             <a>
               <Buttons
                 text='Login'
@@ -425,15 +427,15 @@ const Navbar = ({ props, isSignUp }) => {
               />
             </a>
           </Link>
-          <Buttons
-            text={
-              <Link href='sign-up'>
-                <a>Sign-up</a>
-              </Link>
-            }
-            type={!isSignUp ? "secondary" : "primary"}
-            customStyles={{ margin: "0px 5px" }}
-          />
+          <Link href='sign-up' replace>
+            <a>
+              <Buttons
+                text='Sign-up'
+                type='secondary'
+                customStyles={{ margin: "0px 5px" }}
+              />
+            </a>
+          </Link>
         </motion.div>
       </AnimatePresence>
       <motion.div
