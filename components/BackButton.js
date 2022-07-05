@@ -32,7 +32,7 @@ const BackButton = () => {
       initial='initial'
       whileHover='animate'
       transition='transition'
-      onClick={() => router.back()}
+      onClick={() => router.push("./")}
     >
       <motion.div
         style={{
