@@ -187,7 +187,7 @@ export const MenuItems = [
   },
   {
     title: "Local Chambers",
-    path: "/local-chambers",
+    path: "/membership/local-chambers",
     cName: "dropdown_item",
     parent: "membership",
   },
