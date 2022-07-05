@@ -8,6 +8,10 @@ import Header from "../../components/Header";
 import BackButton from "../../components/BackButton";
 import Meta from "../../components/Meta";
 
+// CSS
+
+import internationalStyles from "../../styles/international-affairs/InternationalAffairs.module.css";
+
 const InternationalAffairs = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -63,14 +67,61 @@ const InternationalAffairs = () => {
               Business Advisory Council (ASEAN-BAC), International Chambers of
               Commerce (ICC) and the Confederation of Asia-Pacific Chambers of
               Commerce and Industry (CACCI). Participation in these
-              organizations further strengthens the PCCI`&apos;`s international
+              organizations further strengthens the PCCI&apos;s international
               linkages and provides venues to engage its foreign partners in
               tackling trade and investment cooperation issues.
             </div>
             <div className='subpage_paragraph'>
-              Serving as the PCCI`&apos;`s primary coordinating group with the
+              Serving as the PCCI&apos;s primary coordinating group with the
               international community, the International Affairs Committee is
               headed by the following officers:
+            </div>
+            <div className={internationalStyles.staff_container}>
+              <div className={internationalStyles.staff_item}>
+                <div>
+                  <h2>AMB. FRANCIS CHUA</h2>
+                  <div>Chairman Emeritus & Director, International Affairs</div>
+                </div>
+              </div>
+              <div className={internationalStyles.staff_item}>
+                <div>
+                  <h2>MR. RENATO G. SIMBULAN</h2>
+                  <div>Chairman for International Affairs</div>
+                </div>
+              </div>
+              <div className={internationalStyles.staff_item}>
+                <div>
+                  <h2>HONORARY CONSUL CARLOS S. RUFINO</h2>
+                  <div>Vice Chair for African Affairs</div>
+                </div>
+              </div>
+              <div className={internationalStyles.staff_item}>
+                <div>
+                  <h2>MR. JESUS B. VARELA</h2>
+                  <div>Vice Chair for American Affairs</div>
+                </div>
+              </div>
+              <div className={internationalStyles.staff_item}>
+                <div>
+                  <h2>MR. ROBERTO C. AMORES</h2>
+                  <div>
+                    Chairman, Agriculture Committee and Vice Chair for Asia and
+                    ASEAN Affairs
+                  </div>
+                </div>
+              </div>
+              <div className={internationalStyles.staff_item}>
+                <div>
+                  <h2>MR. JESUS O. CO</h2>
+                  <div>Vice Chair for European Affairs</div>
+                </div>
+              </div>
+              <div className={internationalStyles.staff_item}>
+                <div>
+                  <h2>MR. BENJAMIN T. LOONG</h2>
+                  <div>Vice Chair for Middle East Affairs</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

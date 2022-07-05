@@ -1,0 +1,25 @@
+.staff_container {
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 10px;
+    color: var(--txt-secondary);
+    width: 100%;
+}
+
+.staff_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--l-grey);
+    padding: 2.5%;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.staff_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}

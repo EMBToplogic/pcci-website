@@ -26,7 +26,7 @@
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
-    grid-column-gap: 3vw;
+    grid-column-gap: 2vw;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -35,7 +35,7 @@
 
 .navbar_list_item {
     padding: inherit;
-    font-size: 14px;
+    font-size: 12px;
     position: relative;
     height: 100%;
     display: flex;
