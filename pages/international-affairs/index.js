@@ -63,12 +63,12 @@ const InternationalAffairs = () => {
               Business Advisory Council (ASEAN-BAC), International Chambers of
               Commerce (ICC) and the Confederation of Asia-Pacific Chambers of
               Commerce and Industry (CACCI). Participation in these
-              organizations further strengthens the PCCI's international
+              organizations further strengthens the PCCI`&apos;`s international
               linkages and provides venues to engage its foreign partners in
               tackling trade and investment cooperation issues.
             </div>
             <div className='subpage_paragraph'>
-              Serving as the PCCI’s primary coordinating group with the
+              Serving as the PCCI`&apos;`s primary coordinating group with the
               international community, the International Affairs Committee is
               headed by the following officers:
             </div>
