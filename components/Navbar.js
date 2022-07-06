@@ -205,6 +205,13 @@ const Navbar = ({ props, isSignUp }) => {
           }}
           key={navStyles.navbar_list}
         >
+          <li className={navStyles.navbar_list_item}>
+            <Link href='../../../' replace>
+              <a className={navStyles.dropdown_link}>
+                <span>Home</span>
+              </a>
+            </Link>
+          </li>
           <li
             className={navStyles.navbar_list_item}
             onMouseEnter={() => {
@@ -368,13 +375,6 @@ const Navbar = ({ props, isSignUp }) => {
                 />
               )}
             </AnimatePresence>
-          </li>
-          <li className={navStyles.navbar_list_item}>
-            <Link href='../../programs-and-services' replace>
-              <a className={navStyles.dropdown_link}>
-                <span>Trainings and Seminars</span>
-              </a>
-            </Link>
           </li>
         </motion.ul>
         <motion.div

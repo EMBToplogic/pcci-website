@@ -26,15 +26,14 @@
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
-    grid-column-gap: 2vw;
     align-items: center;
     text-align: center;
-    width: 100%;
+    column-gap: 2vw;
+    width: 90%;
     height: 100%;
 }
 
 .navbar_list_item {
-    padding: inherit;
     font-size: 12px;
     position: relative;
     height: 100%;
@@ -43,6 +42,7 @@
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+    min-width: 6.5vw;
 }
 
 .navbar_btn_container {
@@ -61,7 +61,7 @@
     align-items: center;
     position: relative;
     cursor: pointer;
-    margin: 20px;
+    margin: 10px;
 }
 
 .navbar_menu_icon_main {
@@ -88,7 +88,7 @@
     position: absolute;
     padding: 25px 0 !important;
     background-color: var(--primary);
-    margin: 20px 0 !important;
+    margin: 10px 0 !important;
     border-radius: 5px;
     top: 50px;
     max-height: 500px;
@@ -117,7 +117,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0% 5px;
+    margin: 0% 2.5px;
 }
 
 .navbar_expand_container {
@@ -125,7 +125,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
     cursor: pointer;
     width: 2.5%;
 }
