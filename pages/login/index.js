@@ -82,17 +82,19 @@ const Login = () => {
                 text='Sign-Up'
                 type='secondary'
                 customStyles={{
-                  width: "50%",
                   height: 60,
+                  width: "100%",
                 }}
+                linkTo='../dashboard'
               />
               <Buttons
                 text='Login'
                 type='primary'
                 customStyles={{
-                  width: "50%",
                   height: 60,
+                  width: "100%",
                 }}
+                linkTo='../dashboard'
               />
             </div>
             <div className={loginStyles.form_footer}>

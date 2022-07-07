@@ -48,9 +48,10 @@
 }
 
 .form_button_group {
-    display: flex;
-    flex-direction: grid;
+    display: grid;
     column-gap: 2%;
+    grid-auto-flow: column;
+    grid-template-columns: 50%;
     margin: 1% 0%;
 }
 
