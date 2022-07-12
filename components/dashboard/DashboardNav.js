@@ -207,7 +207,7 @@ const DashboardNav = () => {
     <div className={dashboardStyles.dashboard_nav}>
       <div className={dashboardStyles.dashboard_logo}>
         <Link href='../../../' replace>
-          <Image src={PCCI_Logo} objectFit='contain' />
+          <Image src={PCCI_Logo} alt='PCCI Logo' objectFit='contain' />
         </Link>
       </div>
       <div className={dashboardStyles.dashboard_nav_profile}>
@@ -247,7 +247,12 @@ const DashboardNav = () => {
           }}
         >
           <div className={dashboardStyles.dashboard_nav_user_image}>
-            <Image src={SampleImage} objectFit='none' layout='fill' />
+            <Image
+              src={SampleImage}
+              objectFit='none'
+              layout='fill'
+              alt='User Image'
+            />
           </div>
           <div className={dashboardStyles.dashboard_nav_user_name}>
             <span>Bruma, Evan M.</span>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 // Components
@@ -107,61 +108,81 @@ const LocalChambers = () => {
             </div>
             <div className={membershipStyles.local_chambers_table_container}>
               <div className={membershipStyles.local_chambers_table}>
-                <div
-                  className={membershipStyles.local_chambers_btn}
-                  onMouseEnter={() => {
-                    handleHover("n-luzon");
-                  }}
-                  onMouseLeave={() => {
-                    setIsHovered(false);
-                  }}
-                >
-                  North Luzon
-                </div>
-                <div
-                  className={membershipStyles.local_chambers_btn}
-                  onMouseEnter={() => {
-                    handleHover("s-luzon");
-                  }}
-                  onMouseLeave={() => {
-                    setIsHovered(false);
-                  }}
-                >
-                  South Luzon
-                </div>
-                <div
-                  className={membershipStyles.local_chambers_btn}
-                  onMouseEnter={() => {
-                    handleHover("ncr");
-                  }}
-                  onMouseLeave={() => {
-                    setIsHovered(false);
-                  }}
-                >
-                  National Capital Region
-                </div>
-                <div
-                  className={membershipStyles.local_chambers_btn}
-                  onMouseEnter={() => {
-                    handleHover("visayas");
-                  }}
-                  onMouseLeave={() => {
-                    setIsHovered(false);
-                  }}
-                >
-                  Visayas
-                </div>
-                <div
-                  className={membershipStyles.local_chambers_btn}
-                  onMouseEnter={() => {
-                    handleHover("mindanao");
-                  }}
-                  onMouseLeave={() => {
-                    setIsHovered(false);
-                  }}
-                >
-                  Mindanao
-                </div>
+                <Link href='/membership/local-chambers/north-luzon' replace>
+                  <a>
+                    <div
+                      className={membershipStyles.local_chambers_btn}
+                      onMouseEnter={() => {
+                        handleHover("n-luzon");
+                      }}
+                      onMouseLeave={() => {
+                        setIsHovered(false);
+                      }}
+                    >
+                      North Luzon
+                    </div>
+                  </a>
+                </Link>
+                <Link href='/membership/local-chambers/south-luzon' replace>
+                  <a>
+                    <div
+                      className={membershipStyles.local_chambers_btn}
+                      onMouseEnter={() => {
+                        handleHover("s-luzon");
+                      }}
+                      onMouseLeave={() => {
+                        setIsHovered(false);
+                      }}
+                    >
+                      South Luzon
+                    </div>
+                  </a>
+                </Link>
+                <Link href='/membership/local-chambers/ncr' replace>
+                  <a>
+                    <div
+                      className={membershipStyles.local_chambers_btn}
+                      onMouseEnter={() => {
+                        handleHover("ncr");
+                      }}
+                      onMouseLeave={() => {
+                        setIsHovered(false);
+                      }}
+                    >
+                      National Capital Region
+                    </div>
+                  </a>
+                </Link>
+                <Link href='/membership/local-chambers/visayas' replace>
+                  <a>
+                    <div
+                      className={membershipStyles.local_chambers_btn}
+                      onMouseEnter={() => {
+                        handleHover("visayas");
+                      }}
+                      onMouseLeave={() => {
+                        setIsHovered(false);
+                      }}
+                    >
+                      Visayas
+                    </div>
+                  </a>
+                </Link>
+                <Link href='/membership/local-chambers/mindanao' replace>
+                  <a>
+                    <div
+                      className={membershipStyles.local_chambers_btn}
+                      onMouseEnter={() => {
+                        handleHover("mindanao");
+                      }}
+                      onMouseLeave={() => {
+                        setIsHovered(false);
+                      }}
+                    >
+                      Mindanao
+                    </div>
+                  </a>
+                </Link>
               </div>
               <div className={membershipStyles.local_chambers_map}>
                 <AnimatePresence exitBeforeEnter>
