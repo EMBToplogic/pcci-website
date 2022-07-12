@@ -23,11 +23,15 @@ CREATE TABLE Chapters (
     regionId INTEGER REFERENCES Chambers(id)
 );
 
+-- REGIONS
+
 INSERT INTO Region (title, areaPresident, regionName) values ('North Luzon', 'Ms. Gregoria G. Simbulan', 'north-luzon');
 INSERT INTO Region (title, areaPresident, regionName) values ('NCR', 'Ms. Teresita L. Ngan Tian', 'ncr');
 INSERT INTO Region (title, areaPresident, regionName) values ('South Luzon', 'Ms. Sallie C. Lacson', 'south-luzon');
 INSERT INTO Region (title, areaPresident, regionName) values ('Visayas', 'Mr. Franklin A. Carbon', 'visayas');
 INSERT INTO Region (title, areaPresident, regionName) values ('Mindanao', 'Mr. Arturo M. Milan', 'mindanao');
+
+-- LOCAL CHAMBERS
 
 INSERT INTO Chambers (regionName, regionId, governor) values ('Cordillera Administrative Region', 'north-luzon', 'Mr. Deimler Cuyan');
 INSERT INTO Chambers (regionName, regionId, governor) values ('Region I', 'north-luzon', 'Mr. Pancracio Nisce');
