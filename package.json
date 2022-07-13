@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@prisma/client": "^4.0.0",
         "@react-spring/web": "^9.4.5",
         "dayjs": "^1.11.3",
         "framer-motion": "^6.3.16",
@@ -23,6 +24,7 @@
         "@types/react": "^18.0.15",
         "@types/sqlite3": "^3.1.8",
         "eslint": "8.18.0",
-        "eslint-config-next": "12.2.0"
+        "eslint-config-next": "12.2.0",
+        "prisma": "^4.0.0"
     }
 }

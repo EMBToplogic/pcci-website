@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model region {
+  id            String     @id @default(cuid())
+  title         String
+  areaPresident String
+  regionName    String
+  chambers      chambers[]
+}
+
+model chambers {
+  id           String     @id @default(cuid())
+  regionName   region     @relation(fields: [parentRegion], references: [id])
+  parentRegion String
+  title        String     @unique
+  chapters     chapters[]
+  governor     String     @default("")
+}
+
+model chapters {
+  id            String   @id @default(cuid())
+  chapterName   String
+  lat           Int
+  long          Int
+  chamberName   chambers @relation(fields: [parentChamber], references: [title])
+  parentChamber String
+}

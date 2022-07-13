@@ -1,8 +1,20 @@
-import { API_ROUTE } from "../../../config";
+import { PrismaClient } from "@prisma/client";
 import React from "react";
 
-const Regions = ({ data }) => {
-  return <div>hello world</div>;
+const prisma = new PrismaClient();
+
+const Chambers = ({ initialChambers }) => {
+  console.log(initialChambers);
+  return <div></div>;
 };
 
-export default Regions;
+export async function getServerSideProps() {
+  const chamber = await prisma.chambers.findMany();
+  return {
+    props: {
+      initialChambers: chamber,
+    },
+  };
+}
+
+export default Chambers;

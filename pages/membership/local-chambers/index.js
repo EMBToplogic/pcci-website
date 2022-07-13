@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
+import { PrismaClient } from "@prisma/client";
 
 // Components
 
@@ -23,7 +24,9 @@ import Visayas from "../../../public/images/maps/visayas.png";
 import NCR from "../../../public/images/maps/ncr.png";
 import Mindanao from "../../../public/images/maps/mindanao.png";
 
-const LocalChambers = () => {
+const prisma = new PrismaClient();
+
+const LocalChambers = ({ initialRegions }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(NLuzon);
   const [isHovered, setIsHovered] = useState(false);
@@ -31,10 +34,10 @@ const LocalChambers = () => {
   const handleHover = (region) => {
     setIsHovered(true);
     switch (region) {
-      case "n-luzon":
+      case "north-luzon":
         setActiveImage(NLuzon);
         break;
-      case "s-luzon":
+      case "south-luzon":
         setActiveImage(SLuzon);
         break;
       case "visayas":
@@ -108,81 +111,29 @@ const LocalChambers = () => {
             </div>
             <div className={membershipStyles.local_chambers_table_container}>
               <div className={membershipStyles.local_chambers_table}>
-                <Link href='/membership/local-chambers/north-luzon' replace>
-                  <a>
-                    <div
-                      className={membershipStyles.local_chambers_btn}
-                      onMouseEnter={() => {
-                        handleHover("n-luzon");
-                      }}
-                      onMouseLeave={() => {
-                        setIsHovered(false);
-                      }}
+                {initialRegions.map((region, index) => {
+                  return (
+                    <Link
+                      href={`/membership/local-chambers/${region.regionName}`}
+                      replace
+                      key={region.id}
                     >
-                      North Luzon
-                    </div>
-                  </a>
-                </Link>
-                <Link href='/membership/local-chambers/south-luzon' replace>
-                  <a>
-                    <div
-                      className={membershipStyles.local_chambers_btn}
-                      onMouseEnter={() => {
-                        handleHover("s-luzon");
-                      }}
-                      onMouseLeave={() => {
-                        setIsHovered(false);
-                      }}
-                    >
-                      South Luzon
-                    </div>
-                  </a>
-                </Link>
-                <Link href='/membership/local-chambers/ncr' replace>
-                  <a>
-                    <div
-                      className={membershipStyles.local_chambers_btn}
-                      onMouseEnter={() => {
-                        handleHover("ncr");
-                      }}
-                      onMouseLeave={() => {
-                        setIsHovered(false);
-                      }}
-                    >
-                      National Capital Region
-                    </div>
-                  </a>
-                </Link>
-                <Link href='/membership/local-chambers/visayas' replace>
-                  <a>
-                    <div
-                      className={membershipStyles.local_chambers_btn}
-                      onMouseEnter={() => {
-                        handleHover("visayas");
-                      }}
-                      onMouseLeave={() => {
-                        setIsHovered(false);
-                      }}
-                    >
-                      Visayas
-                    </div>
-                  </a>
-                </Link>
-                <Link href='/membership/local-chambers/mindanao' replace>
-                  <a>
-                    <div
-                      className={membershipStyles.local_chambers_btn}
-                      onMouseEnter={() => {
-                        handleHover("mindanao");
-                      }}
-                      onMouseLeave={() => {
-                        setIsHovered(false);
-                      }}
-                    >
-                      Mindanao
-                    </div>
-                  </a>
-                </Link>
+                      <a>
+                        <div
+                          className={membershipStyles.local_chambers_btn}
+                          onMouseEnter={() => {
+                            handleHover(`${region.regionName}`);
+                          }}
+                          onMouseLeave={() => {
+                            setIsHovered(false);
+                          }}
+                        >
+                          {region.title}
+                        </div>
+                      </a>
+                    </Link>
+                  );
+                })}
               </div>
               <div className={membershipStyles.local_chambers_map}>
                 <AnimatePresence exitBeforeEnter>
@@ -210,5 +161,16 @@ const LocalChambers = () => {
     </>
   );
 };
+
+export async function getServerSideProps() {
+  const regions = await prisma.region.findMany();
+
+  console.log(regions);
+  return {
+    props: {
+      initialRegions: regions,
+    },
+  };
+}
 
 export default LocalChambers;
