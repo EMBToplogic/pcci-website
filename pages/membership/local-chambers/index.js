@@ -114,7 +114,8 @@ const LocalChambers = ({ initialRegions }) => {
                 {initialRegions.map((region, index) => {
                   return (
                     <Link
-                      href={`/membership/local-chambers/${region.regionName}`}
+                      href={`/membership/local-chambers/[id]`}
+                      as={`/membership/local-chambers/${region.regionName}`}
                       replace
                       key={region.id}
                     >

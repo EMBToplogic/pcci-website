@@ -1,0 +1,81 @@
+.area_president_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.president_title {
+  margin: 0 !important;
+}
+
+.chambers_main {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%/1, max(64px, 100%/3)), 1fr)
+  );
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding-top: 2.5%;
+  overflow-y: scroll;
+}
+
+.chambers_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--l-grey);
+  position: relative;
+}
+
+.chambers_title_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid var(--grey);
+  margin-bottom: 10px;
+}
+
+.chambers_title {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title_icon_container {
+  margin-right: 15px;
+}
+
+.chambers_governor {
+  font-weight: normal;
+  color: var(--black);
+  font-size: 14px;
+}
+
+.chambers_governor_sub {
+  color: var(--d-grey);
+  font-size: 12px;
+}
+
+.chapters_container {
+  overflow-y: scroll;
+}
+
+.chapter_links {
+  color: var(--primary);
+  text-decoration: underline;
+  margin: 5px 0px;
+}

@@ -18,8 +18,8 @@ CREATE TABLE Chapters (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     chapterName TEXT,
     regionName TEXT REFERENCES Chambers(regionName),
-    lat INTEGER,
-    long INTEGER,
+    lat TEXT,
+    long TEXT,
     regionId INTEGER REFERENCES Chambers(id)
 );
 

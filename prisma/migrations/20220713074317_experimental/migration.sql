@@ -10,8 +10,8 @@ CREATE TABLE "Chambers" (
 CREATE TABLE "Chapters" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "chapterName" TEXT NOT NULL,
-    "lat" INTEGER NOT NULL,
-    "long" INTEGER NOT NULL,
+    "lat" DECIMAL(6,3) NOT NULL,
+    "long" DECIMAL(6,3) NOT NULL,
     "parentChamber" TEXT NOT NULL,
     CONSTRAINT "Chapters_parentChamber_fkey" FOREIGN KEY ("parentChamber") REFERENCES "Chambers" ("title") ON DELETE RESTRICT ON UPDATE CASCADE
 );
