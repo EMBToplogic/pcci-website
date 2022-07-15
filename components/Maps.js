@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { API_KEY } from "../config";
 
 const Maps = ({ activeLocation }) => {
   const mapStyles = {
@@ -17,7 +18,7 @@ const Maps = ({ activeLocation }) => {
         width='100%'
         height='100%'
         frameBorder={0}
-        src={`https://www.google.com/maps/embed/v1/place?key=${"AIzaSyDZyUtlD-3zzsRYYKkvGG47BdS8diMrbUg"}&q=${activeLocation
+        src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${activeLocation
           .replace(" ", "+")
           .replace("&", "AND")}`}
         allowFullScreen

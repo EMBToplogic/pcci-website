@@ -100,7 +100,7 @@ const Chambers = ({ initialChambers, regions }) => {
         </div>
         <div
           className='subpage_inner_container'
-          style={{ padding: "3% !important", marginLeft: "10px", width: "50%" }}
+          style={{ padding: "3%", marginLeft: "10px", width: "50%" }}
         >
           <Maps activeLocation={activeLocation} />
         </div>
