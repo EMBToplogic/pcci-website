@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 
 import Navbar from "./Navbar";
 import Menu from "./Menu";
+import Carousel from "./home/Carousel";
 import News from "./home/News";
 import Events from "./home/Events";
 import Footer from "./home/Footer";
@@ -22,7 +23,8 @@ const Layout = ({ news, events }) => {
     <>
       <Menu props={{ isMenuOpen, setIsMenuOpen }} />
       <Navbar props={{ isMenuOpen, setIsMenuOpen }} />
-      <Hero />
+      {/* <Hero /> */}
+      <Carousel />
       <News news={news} />
       <Events events={events} />
       <CorporateSponsors />
