@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 import { ArrowLeft } from "react-feather";
 
-const BackButton = () => {
+const BackButton = ({ isUseHistory }) => {
   const buttonVariants = {
     initial: {
       backgroundColor: "var(--primary)",
@@ -32,7 +32,7 @@ const BackButton = () => {
       initial='initial'
       whileHover='animate'
       transition='transition'
-      onClick={() => router.push("./")}
+      onClick={isUseHistory ? () => router.back() : () => router.push("./")}
     >
       <motion.div
         style={{
