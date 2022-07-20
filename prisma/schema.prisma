@@ -28,10 +28,62 @@ model Chambers {
 }
 
 model Chapters {
-  id            String   @id @default(cuid())
+  id            String          @id @default(cuid())
   chapterName   String
   lat           String
   long          String
-  chamberName   Chambers @relation(fields: [parentChamber], references: [title])
+  chamberName   Chambers        @relation(fields: [parentChamber], references: [title])
   parentChamber String
+  chapterUrl    String          @unique
+  localChambers LocalChambers[]
+}
+
+model LocalChambers {
+  id            String     @id @default(cuid())
+  chapterName   Chapters?  @relation(fields: [parentChapter], references: [chapterUrl])
+  parentChapter String
+  title         String
+  bannerUrl     String
+  services      Services[]
+  servicesTitle String
+  servicesDesc  String
+  events        Events[]
+  about         About[]
+  aboutTitle    String
+  aboutDesc     String
+  phoneNumbers  String
+  email         String
+  address       String
+  sched         String
+}
+
+model Services {
+  id          String        @id @default(cuid())
+  parentLC    LocalChambers @relation(fields: [parentLCId], references: [id])
+  parentLCId  String
+  title       String
+  description String
+  dateEncoded DateTime
+  encodedBy   String
+}
+
+model Events {
+  id          String        @id @default(cuid())
+  parentLC    LocalChambers @relation(fields: [parentLCId], references: [id])
+  parentLCId  String
+  title       String
+  description String
+  eventDate   DateTime
+  eventVenue  String
+  dateEncoded DateTime
+  encodedBy   String
+}
+
+model About {
+  id          String        @id @default(cuid())
+  parentLC    LocalChambers @relation(fields: [parentLCId], references: [id])
+  parentLCId  String
+  title       String
+  subHead     String
+  description String
 }

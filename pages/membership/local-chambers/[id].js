@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PrismaClient } from "@prisma/client";
 import Image from "next/image";
+import Link from "next/link";
 
 // Components
 
@@ -49,6 +50,7 @@ const ChambersContainer = ({ data, setActiveLocation }) => {
       </div>
       <div className={localChambersStyles.chapters_container}>
         {data.chapters.map((chapter) => {
+          console.log(chapter);
           return (
             <div
               className={localChambersStyles.chapter_links}
@@ -57,7 +59,9 @@ const ChambersContainer = ({ data, setActiveLocation }) => {
                 setActiveLocation(chapter.chapterName);
               }}
             >
-              {chapter.chapterName}
+              <Link href={`/chapters/${chapter.chapterUrl}`} replace>
+                <a>{chapter.chapterName}</a>
+              </Link>
             </div>
           );
         })}
