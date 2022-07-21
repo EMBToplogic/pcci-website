@@ -15,7 +15,7 @@ import SampleImage from "../../public/images/img_pcci_bldg.png";
 
 // Icons
 
-import { Bell, ChevronDown } from "react-feather";
+import { Bell, ChevronDown, Terminal, PieChart } from "react-feather";
 
 const DropdownNotifs = ({ setIsNotifHovered, setIsNewNotifs }) => {
   const dropdownVariants = {
@@ -233,49 +233,48 @@ const DashboardNav = ({ props }) => {
         <Image src={PCCI_Logo} alt='PCCI Logo' objectFit='contain' />
       </div>
       <div className={dashboardStyles.dashboard_nav_profile}>
-        {props.isAdminPanel && (
-          <h3
-            style={{
-              color: "var(--white)",
-              borderRadius: "25px",
-              backgroundColor: "var(--secondary)",
-              height: "50px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              padding: "25px",
-            }}
-          >
-            Admin
-          </h3>
-        )}
         <div
-          className={`${dashboardStyles.dashboard_nav_notif} ${
+          className={`${dashboardStyles.dashboard_nav_buttons} ${
             props.isAdminPanel ? dashboardStyles.admin_sec : ""
-          } ${isNewNotifs ? dashboardStyles.active : ""}`}
-          onMouseEnter={() => {
-            setIsNotifHovered(true);
-          }}
-          onMouseLeave={() => {
-            setIsNotifHovered(false);
-            setIsNewNotifs(false);
+          }`}
+          onClick={() => {
+            props.setIsAdminPanel(!props.isAdminPanel);
           }}
         >
-          <Bell />
           <AnimatePresence>
-            {isNotifHovered && (
-              <DropdownNotifs
-                setIsNotifHovered={() => {
-                  setIsNotifHovered;
-                }}
-                setIsNewNotifs={() => {
-                  setIsNewNotifs;
-                }}
-              />
-            )}
+            {props.isAdminPanel && <Terminal />}
+            {!props.isAdminPanel && <PieChart />}
           </AnimatePresence>
         </div>
+        {props.isUserAdmin && (
+          <div
+            className={`${dashboardStyles.dashboard_nav_notif} ${
+              props.isAdminPanel ? dashboardStyles.admin_sec : ""
+            } ${isNewNotifs ? dashboardStyles.active : ""}`}
+            onMouseEnter={() => {
+              setIsNotifHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsNotifHovered(false);
+              setIsNewNotifs(false);
+            }}
+          >
+            <Bell />
+            <AnimatePresence>
+              {isNotifHovered && (
+                <DropdownNotifs
+                  setIsNotifHovered={() => {
+                    setIsNotifHovered;
+                  }}
+                  setIsNewNotifs={() => {
+                    setIsNewNotifs;
+                  }}
+                />
+              )}
+            </AnimatePresence>
+          </div>
+        )}
+
         <div
           className={`${dashboardStyles.dashboard_nav_user_info} ${
             props.isAdminPanel ? dashboardStyles.admin_sec : ""

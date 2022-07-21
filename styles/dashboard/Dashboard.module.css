@@ -47,6 +47,20 @@
   align-items: center;
 }
 
+.dashboard_nav_buttons {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: #384456;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
 .dashboard_nav_notif {
   height: 50px;
   width: 50px;
