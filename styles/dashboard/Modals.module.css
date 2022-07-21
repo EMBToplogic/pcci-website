@@ -50,6 +50,7 @@
   height: 100%;
   width: 100%;
   padding: 20px;
+  overflow-y: scroll;
 }
 
 .footer_btn_secondary {

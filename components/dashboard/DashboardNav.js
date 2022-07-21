@@ -169,7 +169,7 @@ const Dropdown = ({
             className={navStyles.dropdown_item}
             whileHover={whileHover}
           >
-            <a>Change Password</a>
+            <a>Privacy Policy</a>
           </motion.li>
         </Link>
         <Link href={"./terms-of-use"} replace>
