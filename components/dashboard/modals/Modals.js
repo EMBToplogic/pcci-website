@@ -58,7 +58,7 @@ const SubmitButton = ({ setIsModalOpen }) => {
         <div className={modalStyles.footer_btn_icon}>
           <Save />
         </div>
-        <span>Close</span>
+        <span>Submit</span>
       </div>
     </>
   );
