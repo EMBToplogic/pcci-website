@@ -76,7 +76,12 @@ const DropdownNotifs = ({ setIsNotifHovered, setIsNewNotifs }) => {
   );
 };
 
-const Dropdown = ({ setIsProfileHovered }) => {
+const Dropdown = ({
+  setIsProfileHovered,
+  isUserAdmin,
+  isAdminPanel,
+  setIsAdminPanel,
+}) => {
   const dropdownVariants = {
     initial: {
       opacity: 0,
@@ -172,11 +177,25 @@ const Dropdown = ({ setIsProfileHovered }) => {
             className={navStyles.dropdown_item}
             whileHover={whileHover}
           >
-            <a>Terms of Use</a>
+            <a>Privacy Policy</a>
           </motion.li>
         </Link>
+        {isUserAdmin && (
+          <>
+            <div className='divider'>&nbsp;</div>
+            <motion.li
+              className={navStyles.dropdown_item}
+              whileHover={whileHover}
+              onClick={() => {
+                setIsAdminPanel(!isAdminPanel);
+              }}
+            >
+              {`${isAdminPanel ? "Exit" : "Go to"} Admin Panel`}
+            </motion.li>
+          </>
+        )}
         <div className='divider'>&nbsp;</div>
-        <Link href={"./terms-of-use"} replace>
+        <Link href={"../"} replace>
           <motion.li
             className={navStyles.dropdown_item}
             whileHover={whileHover}
@@ -189,10 +208,11 @@ const Dropdown = ({ setIsProfileHovered }) => {
   );
 };
 
-const DashboardNav = () => {
+const DashboardNav = ({ props }) => {
   const [isProfileHovered, setIsProfileHovered] = useState(false);
   const [isNotifHovered, setIsNotifHovered] = useState(false);
   const [isNewNotifs, setIsNewNotifs] = useState(true);
+
   const caretVariant = {
     initial: {
       rotate: 0,
@@ -204,17 +224,36 @@ const DashboardNav = () => {
   };
 
   return (
-    <div className={dashboardStyles.dashboard_nav}>
+    <motion.div
+      className={`${dashboardStyles.dashboard_nav} ${
+        props.isAdminPanel ? dashboardStyles.admin : ""
+      }`}
+    >
       <div className={dashboardStyles.dashboard_logo}>
-        <Link href='../../../' replace>
-          <Image src={PCCI_Logo} alt='PCCI Logo' objectFit='contain' />
-        </Link>
+        <Image src={PCCI_Logo} alt='PCCI Logo' objectFit='contain' />
       </div>
       <div className={dashboardStyles.dashboard_nav_profile}>
+        {props.isAdminPanel && (
+          <h3
+            style={{
+              color: "var(--white)",
+              borderRadius: "25px",
+              backgroundColor: "var(--secondary)",
+              height: "50px",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "25px",
+            }}
+          >
+            Admin
+          </h3>
+        )}
         <div
           className={`${dashboardStyles.dashboard_nav_notif} ${
-            isNewNotifs ? dashboardStyles.active : ""
-          }`}
+            props.isAdminPanel ? dashboardStyles.admin_sec : ""
+          } ${isNewNotifs ? dashboardStyles.active : ""}`}
           onMouseEnter={() => {
             setIsNotifHovered(true);
           }}
@@ -238,7 +277,9 @@ const DashboardNav = () => {
           </AnimatePresence>
         </div>
         <div
-          className={dashboardStyles.dashboard_nav_user_info}
+          className={`${dashboardStyles.dashboard_nav_user_info} ${
+            props.isAdminPanel ? dashboardStyles.admin_sec : ""
+          }`}
           onMouseEnter={() => {
             setIsProfileHovered(true);
           }}
@@ -271,12 +312,15 @@ const DashboardNav = () => {
                 setIsProfileHovered={() => {
                   setIsProfileHovered;
                 }}
+                isUserAdmin={props.isUserAdmin}
+                isAdminPanel={props.isAdminPanel}
+                setIsAdminPanel={props.setIsAdminPanel}
               />
             )}
           </AnimatePresence>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

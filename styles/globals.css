@@ -40,6 +40,9 @@ input {
   width: 100%;
   margin: 10px 0;
 }
+input.form_input {
+  color: var(--black);
+}
 
 input:-webkit-autofill {
   color: var(--primary) !important;
@@ -61,7 +64,7 @@ input[type="checkbox"] {
 
 label {
   font-size: 12px;
-  color: var(--white);
+  color: var(--black);
 }
 
 a {
@@ -174,6 +177,15 @@ h2 {
   right: 0%;
   height: 50px;
   width: 50px;
+}
+
+.input_group_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  position: relative;
+  margin: 1% 0%;
 }
 
 /* width */

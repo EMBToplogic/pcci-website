@@ -43,6 +43,7 @@ const Checkbox = ({ title }) => {
           flexDirection: "row",
           alignItems: "center",
           lineHeight: 1,
+          color: "var(--white)",
         }}
       >
         <input

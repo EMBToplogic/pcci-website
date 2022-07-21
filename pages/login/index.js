@@ -24,6 +24,10 @@ import Hide from "../../public/icons/ic_pass_hidden.png";
 import Buttons from "../../components/Buttons";
 import Checkbox from "../../components/Checkbox";
 
+const loginFormStyles = {
+  color: "var(--white)",
+};
+
 const Login = () => {
   const [passImage, setPassImage] = useState(Show);
   const [isPasswordShown, setIsPasswordShown] = useState(false);
@@ -46,7 +50,7 @@ const Login = () => {
           <h1 className={loginStyles.form_head}>Welcome</h1>
           <form style={{ width: "100%" }}>
             <div className='input_group'>
-              <label>Email Address</label>
+              <label style={loginFormStyles}>Email Address</label>
               <input type='text' name='name' required />
               <div className='input_group_icon'>
                 <Image
@@ -58,7 +62,7 @@ const Login = () => {
               </div>
             </div>
             <div className='input_group'>
-              <label>Password</label>
+              <label style={loginFormStyles}>Password</label>
               <input
                 type={isPasswordShown ? "text" : "password"}
                 name='name'
