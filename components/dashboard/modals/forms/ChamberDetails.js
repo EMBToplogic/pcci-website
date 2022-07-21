@@ -8,7 +8,7 @@ const ChamberDetails = () => {
       <form>
         <div className='input_group_form'>
           <label>Title</label>
-          <input class='form_input' name='name' required />
+          <input className='form_input' name='name' required />
           <div className='input_group_icon'></div>
         </div>
       </form>
