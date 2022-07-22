@@ -4,14 +4,16 @@ import React, { useState } from "react";
 
 import Modals from "./modals/Modals";
 
+// CSS
+
+import modalStyles from "../../styles/dashboard/Modals.module.css";
+
 const AdminContainer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
   return (
     <>
       <Modals props={{ isModalOpen, setIsModalOpen }} />
-      <div onClick={() => setIsModalOpen(true)}>
-        Click here to access the modal
-      </div>
+      <div onClick={() => setIsModalOpen(true)}></div>
     </>
   );
 };

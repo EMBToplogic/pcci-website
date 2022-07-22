@@ -104,6 +104,25 @@ const RichTextEditor = () => {
         toolbar={toolbar}
         onEditorStateChange={onEditorStateChange}
       />
+
+      <div
+        className='input_group_form'
+        style={{
+          width: "100%",
+        }}
+      >
+        <label>HTML Output</label>
+        <textarea
+          readOnly
+          style={{ cursor: "pointer", color: "var(--primary)" }}
+          value={draftToHtml(convertToRaw(description.getCurrentContent()))}
+          onClick={() => {
+            navigator.clipboard.writeText(
+              draftToHtml(convertToRaw(description.getCurrentContent()))
+            );
+          }}
+        />
+      </div>
     </>
   );
 };
