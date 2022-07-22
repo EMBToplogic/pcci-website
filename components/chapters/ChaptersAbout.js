@@ -9,7 +9,6 @@ import Header from "../Header";
 import chaptersStyles from "../../styles/chapters/Chapters.module.css";
 
 const ChaptersAbout = ({ args }) => {
-  console.log(args);
   return (
     <div className={chaptersStyles.chapters_about}>
       <Header title={"About Us"} />
