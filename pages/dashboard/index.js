@@ -9,6 +9,7 @@ import Meta from "../../components/Meta";
 import DashboardNav from "../../components/dashboard/DashboardNav";
 import Container from "../../components/dashboard/Container";
 import AdminContainer from "../../components/dashboard/AdminContainer";
+import AdminSidebar from "../../components/dashboard/AdminSidebar";
 
 // CSS
 
@@ -48,41 +49,53 @@ const Dashboard = () => {
       <Meta title='Dashboard' />
       <Menu props={{ isMenuOpen, setIsMenuOpen }} />
       <DashboardNav props={{ isAdminPanel, setIsAdminPanel, isUserAdmin }} />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         {!isAdminPanel && (
-          <motion.div
-            className={dashboardStyles.dashboard_container}
-            key={isAdminPanel}
-            variants={dashboardVariants}
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            transition='transition'
-          >
-            <div className={dashboardStyles.dashboard_inner}>
-              <div className='input_group w-100'>
-                <input
-                  type='text'
-                  name='name'
-                  required
-                  placeholder='Search Company Name'
-                  className={dashboardStyles.input_dashboard_lg}
-                />
-                <div className={dashboardStyles.input_group_icon}>
-                  <Image
-                    src={SearchIcon}
-                    objectFit='contain'
-                    alt='Search Icon'
+          <>
+            <motion.div
+              className={dashboardStyles.dashboard_container}
+              key={isAdminPanel}
+              variants={dashboardVariants}
+              initial='initial'
+              animate='animate'
+              exit='exit'
+              transition='transition'
+            >
+              <div className={dashboardStyles.dashboard_inner}>
+                <div className='input_group w-100'>
+                  <input
+                    type='text'
+                    name='name'
+                    required
+                    placeholder='Search Company Name'
+                    className={dashboardStyles.input_dashboard_lg}
                   />
+                  <div className={dashboardStyles.input_group_icon}>
+                    <Image
+                      src={SearchIcon}
+                      objectFit='contain'
+                      alt='Search Icon'
+                    />
+                  </div>
+                </div>
+                <div className={dashboardStyles.table_container}>
+                  <Container />
                 </div>
               </div>
-              <div className={dashboardStyles.table_container}>
-                <Container />
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
-        {isAdminPanel && <AdminContainer />}
+      </AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
+        {isAdminPanel && (
+          <>
+            <AdminSidebar
+              isAdminPanel={isAdminPanel}
+              key={`adminSidebar_${isAdminPanel}`}
+            />
+            <AdminContainer key={`adminContainer_${isAdminPanel}`} />
+          </>
+        )}
       </AnimatePresence>
     </>
   );

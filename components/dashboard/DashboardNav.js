@@ -223,15 +223,39 @@ const DashboardNav = ({ props }) => {
     },
   };
 
+  const navVariants = {
+    initial: {
+      width: "calc(100vw - 0px)",
+      justifyContent: "space-between",
+      backgroundColor: "var(--d-black)",
+    },
+    animate: {
+      width: "calc(100vw - 300px)",
+      right: "0%",
+      justifyContent: "flex-end",
+      backgroundColor: "var(--primary)",
+    },
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 0.5,
+    },
+  };
+
   return (
     <motion.div
       className={`${dashboardStyles.dashboard_nav} ${
         props.isAdminPanel ? dashboardStyles.admin : ""
       }`}
+      variants={navVariants}
+      initial='initial'
+      animate={props.isAdminPanel ? "animate" : "initial"}
+      transition={navVariants.transition}
     >
-      <div className={dashboardStyles.dashboard_logo}>
-        <Image src={PCCI_Logo} alt='PCCI Logo' objectFit='contain' />
-      </div>
+      {!props.isAdminPanel && (
+        <div className={dashboardStyles.dashboard_logo}>
+          <Image src={PCCI_Logo} alt='PCCI Logo' objectFit='contain' />
+        </div>
+      )}
       <div className={dashboardStyles.dashboard_nav_profile}>
         <div
           className={`${dashboardStyles.dashboard_nav_buttons} ${
